@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 5047186}
   - component: {fileID: 5047185}
   - component: {fileID: 5047187}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Pared
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -201,8 +201,8 @@ Transform:
   m_GameObject: {fileID: 5047184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.77, z: 0}
-  m_LocalScale: {x: 0.77, y: 6.28407, z: 1}
+  m_LocalPosition: {x: 0, y: -1.91, z: 0}
+  m_LocalScale: {x: 0.77, y: 5.1529374, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -217,7 +217,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 122914408}
   - component: {fileID: 122914407}
   - component: {fileID: 122914409}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Plataforma (1)
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -396,7 +396,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 183804116}
-  m_Layer: 0
+  - component: {fileID: 183804117}
+  m_Layer: 9
   m_Name: Cajas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,6 +421,52 @@ Transform:
   - {fileID: 1456880455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &183804117
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183804115}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &350564099
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,7 +492,7 @@ Transform:
   m_GameObject: {fileID: 350564099}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.9, z: 0}
+  m_LocalPosition: {x: 0, y: -0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -462,7 +509,7 @@ GameObject:
   - component: {fileID: 402162421}
   - component: {fileID: 402162420}
   - component: {fileID: 402162419}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Plataforma (3)
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
@@ -479,7 +526,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -579,7 +626,7 @@ Transform:
   m_GameObject: {fileID: 402162418}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.75, y: -1.88, z: 0}
+  m_LocalPosition: {x: 3.87, y: -1.88, z: 0}
   m_LocalScale: {x: 4.402528, y: 0.62780005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -683,7 +730,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -731,7 +778,7 @@ GameObject:
   - component: {fileID: 628986415}
   - component: {fileID: 628986414}
   - component: {fileID: 628986413}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Caja1
   m_TagString: Caja
   m_Icon: {fileID: 0}
@@ -747,8 +794,8 @@ Transform:
   m_GameObject: {fileID: 628986411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.79, y: -2.5, z: -0.025811523}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: -3.79, y: -3.01, z: -0.025811523}
+  m_LocalScale: {x: 2, y: 2, z: 22}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 183804116}
@@ -765,9 +812,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 4
+  m_LinearDamping: 2
+  m_AngularDamping: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -790,7 +837,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -892,8 +939,8 @@ GameObject:
   - component: {fileID: 972324009}
   - component: {fileID: 972324008}
   - component: {fileID: 972324006}
-  - component: {fileID: 972324007}
   - component: {fileID: 972324010}
+  - component: {fileID: 972324007}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -927,7 +974,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!114 &972324007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -940,28 +987,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0aeaf6ef470f5c499d667760655ff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  masa: 1.2
+  gravedadRelativa: 1
+  coefRestitucion: 0.6
+  velocidadMax: 10
+  aceleracionSuelo: 60
+  aceleracionAire: 20
+  dragSuelo: 3.5
+  dragAire: 0
+  impulsoSalto: 12
+  reboteSuave: 0.3
+  umbralRebote: 3
+  impulsoReboteVerticalExtra: 2.5
   groundCheck: {fileID: 350564100}
-  modoBola: 0
-  masaHumano: 1.2
-  gravedadHumano: 1.1
-  velocidadCaminar: 6
-  saltoHumano: 8
-  masaBola: 2
-  gravedadBola: 1.6
-  fuerzaRodar: 400
-  limiteVelocidadBola: 8
-  saltoBola: 10
-  fuerzaImpactoRompible: 8
-  groundRadius: 0.08
+  groundRadius: 0.18
   groundMask:
     serializedVersion: 2
-    m_Bits: 384
-  escalaHumano: {x: 1, y: 2, z: 1}
-  escalaBola: {x: 1, y: 1, z: 1}
-  colorHumano: {r: 1, g: 1, b: 1, a: 1}
-  colorBola: {r: 0.29424706, g: 0.4283963, b: 0.83396226, a: 1}
-  materialNormal: {fileID: 0}
-  materialBola: {fileID: 0}
+    m_Bits: 640
+  jumpBufferTime: 0.2
+  coyoteTime: 0.15
 --- !u!212 &972324008
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1007,7 +1051,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.25542888, g: 0.67651033, b: 0.7735849, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1026,8 +1070,8 @@ Transform:
   m_GameObject: {fileID: 972324004}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.8, y: -3.5, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -8.8, y: -3.995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 350564100}
@@ -1043,7 +1087,7 @@ CircleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1080,7 +1124,7 @@ GameObject:
   - component: {fileID: 980424722}
   - component: {fileID: 980424721}
   - component: {fileID: 980424720}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Plataforma (4)
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
@@ -1097,7 +1141,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1215,7 +1259,7 @@ GameObject:
   - component: {fileID: 1456880458}
   - component: {fileID: 1456880456}
   - component: {fileID: 1456880459}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Caja2
   m_TagString: Caja
   m_Icon: {fileID: 0}
@@ -1231,7 +1275,7 @@ Transform:
   m_GameObject: {fileID: 1456880454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.43, y: -0.05, z: -0.025811523}
+  m_LocalPosition: {x: 4.29, y: -0.05, z: -0.025811523}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1376,7 +1420,7 @@ GameObject:
   - component: {fileID: 1595219858}
   - component: {fileID: 1595219857}
   - component: {fileID: 1595219856}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Pared (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1393,7 +1437,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1510,9 +1554,9 @@ GameObject:
   - component: {fileID: 1916526835}
   - component: {fileID: 1916526834}
   - component: {fileID: 1916526836}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Plataforma
-  m_TagString: Plataforma
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1597,7 +1641,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1644,7 +1688,7 @@ GameObject:
   - component: {fileID: 2085340515}
   - component: {fileID: 2085340514}
   - component: {fileID: 2085340516}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Plataforma (2)
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
@@ -1731,7 +1775,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
