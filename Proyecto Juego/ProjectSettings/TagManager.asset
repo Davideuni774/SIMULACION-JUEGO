@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Wall
   - Plataforma
+  - Caja
   layers:
   - Default
   - TransparentFX

@@ -1,162 +1,174 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
-public class JugadorFisico : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D), typeof(SpriteRenderer))]
+public class JugadorFisicoAvanzado : MonoBehaviour
 {
-    [Header("Física básica")]
-    public float masa = 1.2f;
-    [Tooltip("1 = gravedad normal; >1 = caída más rápida")]
-    public float gravedadRelativa = 1.2f;
-    [Range(0f, 1f)] public float coefRestitucion = 0.6f;
-
-    [Header("Movimiento")]
-    public float velocidadMax = 6f;
-    public float aceleracionSuelo = 60f;
-    public float aceleracionAire = 20f;
-    public float dragSuelo = 6f;
-    public float dragAire = 1f;
-
-    [Header("Salto y Rebote")]
-    public float impulsoSalto = 8f;
-    [Tooltip("Fracción de la velocidad vertical que se conserva al rebotar")]
-    public float reboteSuave = 0.3f;
-    public float umbralRebote = 3f;
-
-    [Header("Ground Check")]
+    [Header("----- COMPONENTES -----")]
+    private Rigidbody2D rb;
+    private SpriteRenderer sr;
     public Transform groundCheck;
-    public float groundRadius = 0.08f;
-    public LayerMask groundMask;
 
-    [Header("Tiempos de gracia")]
-    public float jumpBufferTime = 0.15f;  // margen para no perder saltos
-    public float coyoteTime = 0.1f;       // permite saltar poco después de caer
-
-    // Estado
+    [Header("----- ESTADO ACTUAL -----")]
+    public bool modoBola = false;
     private bool enSuelo;
     private bool enSueloPrevio;
     private float vyPrevio;
 
-    // Input
+    [Header("----- MODO PERSONAJE -----")]
+    public float masaHumano = 1.5f;
+    public float gravedadHumano = 1.1f;
+    public float velocidadCaminar = 6f;
+    public float saltoHumano = 8f;
+
+    [Header("----- MODO BOLA -----")]
+    public float masaBola = 3.5f;
+    public float gravedadBola = 1.3f;
+    public float fuerzaRodar = 400f;
+    public float limiteVelocidadBola = 10f;
+    public float saltoBola = 10f;
+    public float fuerzaImpactoRompible = 8f;
+
+    [Header("----- DETECCIÃ“N DE SUELO -----")]
+    public float groundRadius = 0.1f;
+    public LayerMask groundMask;
+
+    [Header("----- ESCALA Y COLOR -----")]
+    public Vector3 escalaHumano = new Vector3(1f, 2f, 1f); // mide 2 bloques
+    public Vector3 escalaBola = new Vector3(1f, 1f, 1f);   // mide 1 bloque
+    public Color colorHumano = Color.white;
+    public Color colorBola = Color.cyan;
+
+    [Header("----- COLISIONES -----")]
+    public PhysicsMaterial2D materialNormal;
+    public PhysicsMaterial2D materialBola;
+
     private float inputX;
     private bool jumpPressed;
-    private bool jumpHeld;
-
-    // Temporizadores
-    private float jumpBufferCounter = 0f;
-    private float coyoteCounter = 0f;
-
-    private Rigidbody2D rb;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.mass = masa;
-        rb.gravityScale = gravedadRelativa;
+        sr = GetComponent<SpriteRenderer>();
         rb.freezeRotation = true;
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
-
-        var mat = new PhysicsMaterial2D("ReboteNatural")
-        {
-            bounciness = coefRestitucion,
-            friction = 0.8f
-        };
-        rb.sharedMaterial = mat;
+        CambiarModo(false);
     }
 
     void Update()
     {
         vyPrevio = rb.linearVelocity.y;
         LeerInput();
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            modoBola = !modoBola;
+            CambiarModo(modoBola);
+        }
     }
 
     void LeerInput()
     {
-        // --- Movimiento horizontal (A/D o flechas) ---
-        float axisX = 0f;
-        try { axisX = Input.GetAxisRaw("Horizontal"); } catch { axisX = 0f; }
-
-        if (Mathf.Approximately(axisX, 0f))
-        {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) axisX -= 1f;
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) axisX += 1f;
-        }
-        inputX = Mathf.Clamp(axisX, -1f, 1f);
-
-        // --- Saltar (detectar pulsación y mantener) ---
+        inputX = Input.GetAxisRaw("Horizontal");
         jumpPressed = Input.GetButtonDown("Jump") ||
                       Input.GetKeyDown(KeyCode.Space) ||
                       Input.GetKeyDown(KeyCode.W) ||
                       Input.GetKeyDown(KeyCode.UpArrow);
-
-        jumpHeld = Input.GetButton("Jump") ||
-                   Input.GetKey(KeyCode.Space) ||
-                   Input.GetKey(KeyCode.W) ||
-                   Input.GetKey(KeyCode.UpArrow);
-
-        // Guardar el salto en el buffer unos milisegundos
-        if (jumpPressed)
-            jumpBufferCounter = jumpBufferTime;
-        else
-            jumpBufferCounter -= Time.deltaTime;
     }
 
     void FixedUpdate()
     {
-        // --- Detectar suelo ---
         enSueloPrevio = enSuelo;
         if (groundCheck != null)
             enSuelo = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
         else
             enSuelo = false;
 
-        // --- Contador de coyote time (gracia al caer) ---
-        if (enSuelo)
-            coyoteCounter = coyoteTime;
+        if (modoBola)
+            FisicaBola();
         else
-            coyoteCounter -= Time.fixedDeltaTime;
+            FisicaHumano();
+    }
 
-        // --- Movimiento horizontal ---
+    // =====================
+    // ðŸ”¹ MODO PERSONAJE
+    // =====================
+    void FisicaHumano()
+    {
         Vector2 v = rb.linearVelocity;
-        float targetVX = inputX * velocidadMax;
-        float accel = enSuelo ? aceleracionSuelo : aceleracionAire;
-        v.x = Mathf.MoveTowards(v.x, targetVX, accel * Time.fixedDeltaTime);
-        rb.linearDamping = enSuelo ? dragSuelo : dragAire;
-
-        // --- SALTO con buffer y coyote time ---
-        if (jumpBufferCounter > 0 && coyoteCounter > 0)
-        {
-            v.y = 0f;
-            rb.AddForce(Vector2.up * impulsoSalto, ForceMode2D.Impulse);
-            enSuelo = false;
-            jumpBufferCounter = 0f; // limpiar buffer tras salto
-        }
-
-        // --- SALTO VARIABLE (altura depende del tiempo que mantienes la tecla) ---
-        if (!enSuelo && !jumpHeld && rb.linearVelocity.y > 0)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-        }
-
+        v.x = inputX * velocidadCaminar;
         rb.linearVelocity = new Vector2(v.x, rb.linearVelocity.y);
 
-        // --- Rebote pequeño al aterrizar ---
-        if (!enSueloPrevio && enSuelo)
+        if (jumpPressed && enSuelo)
         {
-            float vyImpacto = Mathf.Abs(vyPrevio);
-            if (vyImpacto > umbralRebote)
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, vyImpacto * reboteSuave);
-            else
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+            rb.AddForce(Vector2.up * saltoHumano, ForceMode2D.Impulse);
         }
     }
 
+    // =====================
+    // ðŸ”¹ MODO BOLA
+    // =====================
+    void FisicaBola()
+    {
+        float move = Input.GetAxis("Horizontal");
+        rb.AddForce(Vector2.right * move * fuerzaRodar * Time.fixedDeltaTime);
+
+        // limitar velocidad horizontal
+        rb.linearVelocity = new Vector2(
+            Mathf.Clamp(rb.linearVelocity.x, -limiteVelocidadBola, limiteVelocidadBola),
+            rb.linearVelocity.y
+        );
+
+        // salto especial (rebote mayor)
+        if (jumpPressed && enSuelo)
+        {
+            rb.AddForce(Vector2.up * saltoBola, ForceMode2D.Impulse);
+        }
+    }
+
+    // =====================
+    // ðŸ”¹ CAMBIO DE MODO
+    // =====================
+    void CambiarModo(bool bola)
+    {
+        if (bola)
+        {
+            // âšª Se convierte en bola
+            sr.color = colorBola;
+            transform.localScale = escalaBola;
+            rb.mass = masaBola;
+            rb.gravityScale = gravedadBola;
+            rb.sharedMaterial = materialBola;
+        }
+        else
+        {
+            // ðŸ§â€â™‚ï¸ Vuelve a personaje
+            sr.color = colorHumano;
+            transform.localScale = escalaHumano;
+            rb.mass = masaHumano;
+            rb.gravityScale = gravedadHumano;
+            rb.sharedMaterial = materialNormal;
+        }
+    }
+
+    // =====================
+    // ðŸ”¹ COLISIONES
+    // =====================
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Wall"))
+        // Si estÃ¡ en modo bola y choca con fuerza, romper objeto rompible
+        if (modoBola && col.relativeVelocity.magnitude > fuerzaImpactoRompible)
         {
-            Vector2 n = col.contacts[0].normal;
-            rb.linearVelocity = Vector2.Reflect(rb.linearVelocity, n) * coefRestitucion;
+            if (col.gameObject.CompareTag("Rompible"))
+            {
+                Destroy(col.gameObject);
+                Debug.Log("ðŸ’¥ Objeto rompible destruido!");
+            }
+        }
+
+        // Empuje de cajas solo si estÃ¡ en modo bola
+        if (modoBola && col.rigidbody != null)
+        {
+            Vector2 dir = col.contacts[0].normal * -1f;
+            col.rigidbody.AddForce(dir * 5f, ForceMode2D.Impulse);
         }
     }
 
@@ -165,7 +177,7 @@ public class JugadorFisico : MonoBehaviour
     {
         if (groundCheck != null)
         {
-            Gizmos.color = Color.cyan;
+            Gizmos.color = enSuelo ? Color.green : Color.cyan;
             Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         }
     }
