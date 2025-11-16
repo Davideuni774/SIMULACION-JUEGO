@@ -1,0 +1,5018 @@
+fileFormatVersion: 2
+guid: 8e558644feb53e34d9f0e17316e4bf50
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3808919165762555011
+    second: DesertVaniaTileset_0
+  - first:
+      213: -2089564438004220349
+    second: DesertVaniaTileset_1
+  - first:
+      213: -3294139894298993470
+    second: DesertVaniaTileset_2
+  - first:
+      213: -8409487366643164450
+    second: DesertVaniaTileset_3
+  - first:
+      213: 2591218301200944794
+    second: DesertVaniaTileset_4
+  - first:
+      213: 8596461481123908775
+    second: DesertVaniaTileset_5
+  - first:
+      213: 2443266353930767567
+    second: DesertVaniaTileset_6
+  - first:
+      213: -4676986335614650493
+    second: DesertVaniaTileset_7
+  - first:
+      213: 2182017420965025167
+    second: DesertVaniaTileset_8
+  - first:
+      213: -3280456349853187285
+    second: DesertVaniaTileset_9
+  - first:
+      213: 6412760833822676428
+    second: DesertVaniaTileset_10
+  - first:
+      213: 5612266872156225031
+    second: DesertVaniaTileset_11
+  - first:
+      213: 5503312058523516193
+    second: DesertVaniaTileset_12
+  - first:
+      213: 242332661806796135
+    second: DesertVaniaTileset_13
+  - first:
+      213: 6363501018141058760
+    second: DesertVaniaTileset_14
+  - first:
+      213: 1585367218598510758
+    second: DesertVaniaTileset_15
+  - first:
+      213: 7900807859727981771
+    second: DesertVaniaTileset_16
+  - first:
+      213: -2578243851171750475
+    second: DesertVaniaTileset_17
+  - first:
+      213: 4353140955801494680
+    second: DesertVaniaTileset_18
+  - first:
+      213: -5943353069951725202
+    second: DesertVaniaTileset_19
+  - first:
+      213: 212396918287012524
+    second: DesertVaniaTileset_20
+  - first:
+      213: -8408351453087975122
+    second: DesertVaniaTileset_21
+  - first:
+      213: 5617571137211824609
+    second: DesertVaniaTileset_22
+  - first:
+      213: -7496839966779476702
+    second: DesertVaniaTileset_23
+  - first:
+      213: -7863353756500065568
+    second: DesertVaniaTileset_24
+  - first:
+      213: 7874861303505646762
+    second: DesertVaniaTileset_25
+  - first:
+      213: 744424674576036346
+    second: DesertVaniaTileset_26
+  - first:
+      213: -3162342745894354661
+    second: DesertVaniaTileset_27
+  - first:
+      213: 1482265171092499052
+    second: DesertVaniaTileset_28
+  - first:
+      213: -3477643785571289278
+    second: DesertVaniaTileset_29
+  - first:
+      213: 8819562621801167782
+    second: DesertVaniaTileset_30
+  - first:
+      213: -2133717373407564687
+    second: DesertVaniaTileset_31
+  - first:
+      213: 9195556555489867673
+    second: DesertVaniaTileset_32
+  - first:
+      213: 8396893859417481772
+    second: DesertVaniaTileset_33
+  - first:
+      213: 2346924944086252028
+    second: DesertVaniaTileset_34
+  - first:
+      213: 5662631366255136013
+    second: DesertVaniaTileset_35
+  - first:
+      213: -2332484095046958765
+    second: DesertVaniaTileset_36
+  - first:
+      213: 517758405279493485
+    second: DesertVaniaTileset_37
+  - first:
+      213: -5944311540280752044
+    second: DesertVaniaTileset_38
+  - first:
+      213: -940828479187226047
+    second: DesertVaniaTileset_39
+  - first:
+      213: -8727596754665269001
+    second: DesertVaniaTileset_40
+  - first:
+      213: 8584232733204562677
+    second: DesertVaniaTileset_41
+  - first:
+      213: -8779897022839092054
+    second: DesertVaniaTileset_42
+  - first:
+      213: -768646579700198620
+    second: DesertVaniaTileset_43
+  - first:
+      213: -3054502048550898093
+    second: DesertVaniaTileset_44
+  - first:
+      213: 753371916301591770
+    second: DesertVaniaTileset_45
+  - first:
+      213: 1399500744122568181
+    second: DesertVaniaTileset_46
+  - first:
+      213: 2473542802775429782
+    second: DesertVaniaTileset_47
+  - first:
+      213: -4797706239339680602
+    second: DesertVaniaTileset_48
+  - first:
+      213: 899263670526831414
+    second: DesertVaniaTileset_49
+  - first:
+      213: 4729953494783514213
+    second: DesertVaniaTileset_50
+  - first:
+      213: 6179217312802759877
+    second: DesertVaniaTileset_51
+  - first:
+      213: -7898040316623302256
+    second: DesertVaniaTileset_52
+  - first:
+      213: 5543564108353827630
+    second: DesertVaniaTileset_53
+  - first:
+      213: -8410724794952027565
+    second: DesertVaniaTileset_54
+  - first:
+      213: -2076560160226416346
+    second: DesertVaniaTileset_55
+  - first:
+      213: 3168162781407886067
+    second: DesertVaniaTileset_56
+  - first:
+      213: -7665203339113456575
+    second: DesertVaniaTileset_57
+  - first:
+      213: 6639825288712241173
+    second: DesertVaniaTileset_58
+  - first:
+      213: -235746723871443569
+    second: DesertVaniaTileset_59
+  - first:
+      213: -2980560831357681951
+    second: DesertVaniaTileset_60
+  - first:
+      213: 2862136402215083804
+    second: DesertVaniaTileset_61
+  - first:
+      213: 2365877517423480041
+    second: DesertVaniaTileset_62
+  - first:
+      213: -7768905892739564907
+    second: DesertVaniaTileset_63
+  - first:
+      213: -8994140925438160022
+    second: DesertVaniaTileset_64
+  - first:
+      213: 5257862718464607074
+    second: DesertVaniaTileset_65
+  - first:
+      213: -1379381896386626359
+    second: DesertVaniaTileset_66
+  - first:
+      213: -7495970200111001813
+    second: DesertVaniaTileset_67
+  - first:
+      213: -6025908205917673051
+    second: DesertVaniaTileset_68
+  - first:
+      213: 122325695467194153
+    second: DesertVaniaTileset_69
+  - first:
+      213: 3148362871187876985
+    second: DesertVaniaTileset_70
+  - first:
+      213: 1251120238787896562
+    second: DesertVaniaTileset_71
+  - first:
+      213: -6839488686304080092
+    second: DesertVaniaTileset_72
+  - first:
+      213: -3358804971716145849
+    second: DesertVaniaTileset_73
+  - first:
+      213: -1074110820836927908
+    second: DesertVaniaTileset_74
+  - first:
+      213: 316029683784847277
+    second: DesertVaniaTileset_75
+  - first:
+      213: -1695139442281575653
+    second: DesertVaniaTileset_76
+  - first:
+      213: 5601913984047636770
+    second: DesertVaniaTileset_77
+  - first:
+      213: -3254683473301092564
+    second: DesertVaniaTileset_78
+  - first:
+      213: -7945858782624701383
+    second: DesertVaniaTileset_79
+  - first:
+      213: -5068763486081632469
+    second: DesertVaniaTileset_80
+  - first:
+      213: -1917442936744883877
+    second: DesertVaniaTileset_81
+  - first:
+      213: -2734065003242118884
+    second: DesertVaniaTileset_82
+  - first:
+      213: -3123112098230136949
+    second: DesertVaniaTileset_83
+  - first:
+      213: -2788435201503883336
+    second: DesertVaniaTileset_84
+  - first:
+      213: 4454083300395446649
+    second: DesertVaniaTileset_85
+  - first:
+      213: 922334839305523596
+    second: DesertVaniaTileset_86
+  - first:
+      213: -6618584055713658181
+    second: DesertVaniaTileset_87
+  - first:
+      213: 746838331613832205
+    second: DesertVaniaTileset_88
+  - first:
+      213: -9197436399514116016
+    second: DesertVaniaTileset_89
+  - first:
+      213: 1972793080938675141
+    second: DesertVaniaTileset_90
+  - first:
+      213: 5453745138665550099
+    second: DesertVaniaTileset_91
+  - first:
+      213: -4622432703202387766
+    second: DesertVaniaTileset_92
+  - first:
+      213: -7787921826606497131
+    second: DesertVaniaTileset_93
+  - first:
+      213: -8297621904008658745
+    second: DesertVaniaTileset_94
+  - first:
+      213: 6196789172862145501
+    second: DesertVaniaTileset_95
+  - first:
+      213: -7122301525281422453
+    second: DesertVaniaTileset_96
+  - first:
+      213: 3147549019553889746
+    second: DesertVaniaTileset_97
+  - first:
+      213: -6690400833388014466
+    second: DesertVaniaTileset_98
+  - first:
+      213: -370565606127624638
+    second: DesertVaniaTileset_99
+  - first:
+      213: 1107551275493264548
+    second: DesertVaniaTileset_100
+  - first:
+      213: -8133341810992276400
+    second: DesertVaniaTileset_101
+  - first:
+      213: 4088469726889500716
+    second: DesertVaniaTileset_102
+  - first:
+      213: 8835909041737660968
+    second: DesertVaniaTileset_103
+  - first:
+      213: 2405591582369744445
+    second: DesertVaniaTileset_104
+  - first:
+      213: -7896687298189576592
+    second: DesertVaniaTileset_105
+  - first:
+      213: -1776705765529722667
+    second: DesertVaniaTileset_106
+  - first:
+      213: -3245665225261833792
+    second: DesertVaniaTileset_107
+  - first:
+      213: 5750518440357643704
+    second: DesertVaniaTileset_108
+  - first:
+      213: 8331858181370540550
+    second: DesertVaniaTileset_109
+  - first:
+      213: 6527641595716300845
+    second: DesertVaniaTileset_110
+  - first:
+      213: 7245632796716574521
+    second: DesertVaniaTileset_111
+  - first:
+      213: 1280217627600515453
+    second: DesertVaniaTileset_112
+  - first:
+      213: 4256041618363472068
+    second: DesertVaniaTileset_113
+  - first:
+      213: -3023052466621857651
+    second: DesertVaniaTileset_114
+  - first:
+      213: -4414564695746816250
+    second: DesertVaniaTileset_115
+  - first:
+      213: 8129289659082245979
+    second: DesertVaniaTileset_116
+  - first:
+      213: 5763738231557192454
+    second: DesertVaniaTileset_117
+  - first:
+      213: -8835109455241555875
+    second: DesertVaniaTileset_118
+  - first:
+      213: 1082534874687002344
+    second: DesertVaniaTileset_119
+  - first:
+      213: 6388817229712596075
+    second: DesertVaniaTileset_120
+  - first:
+      213: 4458439409628147414
+    second: DesertVaniaTileset_121
+  - first:
+      213: -9043958568679746487
+    second: DesertVaniaTileset_122
+  - first:
+      213: -4794927827022676344
+    second: DesertVaniaTileset_123
+  - first:
+      213: 2420706290089111805
+    second: DesertVaniaTileset_124
+  - first:
+      213: -6513346743735150354
+    second: DesertVaniaTileset_125
+  - first:
+      213: 6932806022105455078
+    second: DesertVaniaTileset_126
+  - first:
+      213: 1170622832723320238
+    second: DesertVaniaTileset_127
+  - first:
+      213: 6804244654113723470
+    second: DesertVaniaTileset_128
+  - first:
+      213: 5722419306175959327
+    second: DesertVaniaTileset_129
+  - first:
+      213: -4570876935363000650
+    second: DesertVaniaTileset_130
+  - first:
+      213: 4199851397789838891
+    second: DesertVaniaTileset_131
+  - first:
+      213: 912242385595917488
+    second: DesertVaniaTileset_132
+  - first:
+      213: 8996004089637519538
+    second: DesertVaniaTileset_133
+  - first:
+      213: -2266049038229760371
+    second: DesertVaniaTileset_134
+  - first:
+      213: -2638497064643787320
+    second: DesertVaniaTileset_135
+  - first:
+      213: -1567259293609919140
+    second: DesertVaniaTileset_136
+  - first:
+      213: 6394910695820703059
+    second: DesertVaniaTileset_137
+  - first:
+      213: -2419462009214885430
+    second: DesertVaniaTileset_138
+  - first:
+      213: 4100708210469358480
+    second: DesertVaniaTileset_139
+  - first:
+      213: 1483797459725992743
+    second: DesertVaniaTileset_140
+  - first:
+      213: 9175030959059315711
+    second: DesertVaniaTileset_141
+  - first:
+      213: -1604520588689559459
+    second: DesertVaniaTileset_142
+  - first:
+      213: 3559641871667532082
+    second: DesertVaniaTileset_143
+  - first:
+      213: 3349261839804886412
+    second: DesertVaniaTileset_144
+  - first:
+      213: 3961420688739066820
+    second: DesertVaniaTileset_145
+  - first:
+      213: -3091317132284514503
+    second: DesertVaniaTileset_146
+  - first:
+      213: 6917009204629872732
+    second: DesertVaniaTileset_147
+  - first:
+      213: -2847571451096922581
+    second: DesertVaniaTileset_148
+  - first:
+      213: -1032438571803426001
+    second: DesertVaniaTileset_149
+  - first:
+      213: 4230288252146313072
+    second: DesertVaniaTileset_150
+  - first:
+      213: -826398588473396993
+    second: DesertVaniaTileset_151
+  - first:
+      213: 5262232563035563850
+    second: DesertVaniaTileset_152
+  - first:
+      213: -1539415345279835564
+    second: DesertVaniaTileset_153
+  - first:
+      213: -1417995171312399098
+    second: DesertVaniaTileset_154
+  - first:
+      213: 2711181922201049937
+    second: DesertVaniaTileset_155
+  - first:
+      213: 4061839947541205972
+    second: DesertVaniaTileset_156
+  - first:
+      213: -3423110043605644475
+    second: DesertVaniaTileset_157
+  - first:
+      213: 9175948530033786999
+    second: DesertVaniaTileset_158
+  - first:
+      213: -8539794020312816935
+    second: DesertVaniaTileset_159
+  - first:
+      213: 1199668964917737724
+    second: DesertVaniaTileset_160
+  - first:
+      213: -6256657690552441882
+    second: DesertVaniaTileset_161
+  - first:
+      213: 3668302031836657412
+    second: DesertVaniaTileset_162
+  - first:
+      213: -3346110764419813755
+    second: DesertVaniaTileset_163
+  - first:
+      213: -705957532355793196
+    second: DesertVaniaTileset_164
+  - first:
+      213: -8190095604122770832
+    second: DesertVaniaTileset_165
+  - first:
+      213: 6406800516955162536
+    second: DesertVaniaTileset_166
+  - first:
+      213: -2881487565060375407
+    second: DesertVaniaTileset_167
+  - first:
+      213: -2391588757702164737
+    second: DesertVaniaTileset_168
+  - first:
+      213: 6394158542167750602
+    second: DesertVaniaTileset_169
+  - first:
+      213: -8948151348557413233
+    second: DesertVaniaTileset_170
+  - first:
+      213: 1853879041343081250
+    second: DesertVaniaTileset_171
+  - first:
+      213: 4328208350135020440
+    second: DesertVaniaTileset_172
+  - first:
+      213: -5719761935940342030
+    second: DesertVaniaTileset_173
+  - first:
+      213: -5788810018320441994
+    second: DesertVaniaTileset_174
+  - first:
+      213: 3837388215748490030
+    second: DesertVaniaTileset_175
+  - first:
+      213: 3260418166035133225
+    second: DesertVaniaTileset_176
+  - first:
+      213: 7214022274022078051
+    second: DesertVaniaTileset_177
+  - first:
+      213: -5025393893475985991
+    second: DesertVaniaTileset_178
+  - first:
+      213: -1747364575434832927
+    second: DesertVaniaTileset_179
+  - first:
+      213: 8094323838874463329
+    second: DesertVaniaTileset_180
+  - first:
+      213: -1234267966084173017
+    second: DesertVaniaTileset_181
+  - first:
+      213: 47054136127599232
+    second: DesertVaniaTileset_182
+  - first:
+      213: -8430916068967976963
+    second: DesertVaniaTileset_183
+  - first:
+      213: 4665007230382424677
+    second: DesertVaniaTileset_184
+  - first:
+      213: 8083755349233283956
+    second: DesertVaniaTileset_185
+  - first:
+      213: -3524583178570091830
+    second: DesertVaniaTileset_186
+  - first:
+      213: 3796434650828744252
+    second: DesertVaniaTileset_187
+  - first:
+      213: -4292204841155054239
+    second: DesertVaniaTileset_188
+  - first:
+      213: -9016429916409656450
+    second: DesertVaniaTileset_189
+  - first:
+      213: 5064390223576351449
+    second: DesertVaniaTileset_190
+  - first:
+      213: 7416816549594800509
+    second: DesertVaniaTileset_191
+  - first:
+      213: -1568003982645521718
+    second: DesertVaniaTileset_192
+  - first:
+      213: 29871144908846588
+    second: DesertVaniaTileset_193
+  - first:
+      213: 6781316357643784055
+    second: DesertVaniaTileset_194
+  - first:
+      213: 8264573654689828599
+    second: DesertVaniaTileset_195
+  - first:
+      213: -2421946825337344999
+    second: DesertVaniaTileset_196
+  - first:
+      213: 357589205436222745
+    second: DesertVaniaTileset_197
+  - first:
+      213: 6173213973374237056
+    second: DesertVaniaTileset_198
+  - first:
+      213: -792113541691907236
+    second: DesertVaniaTileset_199
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DesertVaniaTileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38c447dfccffbd430800000000000000
+      internalID: 3808919165762555011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e3871f6306003e0800000000000000
+      internalID: -2089564438004220349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc9ddf183dd842d0800000000000000
+      internalID: -3294139894298993470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eda5910abcf7b4b80800000000000000
+      internalID: -8409487366643164450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ec29ae05bd5f320800000000000000
+      internalID: 2591218301200944794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_5
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac08bbcb24cc4770800000000000000
+      internalID: 8596461481123908775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc05bdcdc938e120800000000000000
+      internalID: 2443266353930767567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_7
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 387355e15b1081fb0800000000000000
+      internalID: -4676986335614650493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_8
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8595569845184e10800000000000000
+      internalID: 2182017420965025167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_9
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2383d5945a7972d0800000000000000
+      internalID: -3280456349853187285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_10
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5d9898004bef850800000000000000
+      internalID: 6412760833822676428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_11
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e70933cf6c2ed40800000000000000
+      internalID: 5612266872156225031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_12
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12dfa60d821bf5c40800000000000000
+      internalID: 5503312058523516193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_13
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d0870a540fc5300800000000000000
+      internalID: 242332661806796135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_14
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c66222f572bf4850800000000000000
+      internalID: 6363501018141058760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a00d1fe51b500610800000000000000
+      internalID: 1585367218598510758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_16
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc53bd53ee45ad60800000000000000
+      internalID: 7900807859727981771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_17
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd9292a0ec383cd0800000000000000
+      internalID: -2578243851171750475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_18
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 169
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894a0c7a2a6796c30800000000000000
+      internalID: 4353140955801494680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61dcc24fd7f48da0800000000000000
+      internalID: -5943353069951725202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_20
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca292e13fd592f200800000000000000
+      internalID: 212396918287012524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_21
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e293d0c17e88f4b80800000000000000
+      internalID: -8408351453087975122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_22
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e97ff5af2f95fd40800000000000000
+      internalID: 5617571137211824609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_23
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225782a25cfd5f790800000000000000
+      internalID: -7496839966779476702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_24
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e284989b61cfd290800000000000000
+      internalID: -7863353756500065568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_25
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa47ceaf1a0294d60800000000000000
+      internalID: 7874861303505646762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_26
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1f3222c4ab45a00800000000000000
+      internalID: 744424674576036346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_27
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b110fe4070a1d14d0800000000000000
+      internalID: -3162342745894354661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_28
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ae6e9d150129410800000000000000
+      internalID: 1482265171092499052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_29
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247bda1076decbfc0800000000000000
+      internalID: -3477643785571289278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_30
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab75caf971656a70800000000000000
+      internalID: 8819562621801167782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_31
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c66f29a538362e0800000000000000
+      internalID: -2133717373407564687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_32
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997fcf197fd2d9f70800000000000000
+      internalID: 9195556555489867673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_33
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c22ec3bf972c78470800000000000000
+      internalID: 8396893859417481772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_34
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf9b3c65dc3f19020800000000000000
+      internalID: 2346924944086252028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_35
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0d4f97c935b59e40800000000000000
+      internalID: 5662631366255136013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_36
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3514a76d21a51afd0800000000000000
+      internalID: -2332484095046958765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_37
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 152
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d2822c6827f2700800000000000000
+      internalID: 517758405279493485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4588f4ff520918da0800000000000000
+      internalID: -5944311540280752044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_39
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 142797f9b7181f2f0800000000000000
+      internalID: -940828479187226047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_40
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f8135f0ef851e680800000000000000
+      internalID: -8727596754665269001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_41
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f240fb8032512770800000000000000
+      internalID: 8584232733204562677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_42
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aac8a25fc2a872680800000000000000
+      internalID: -8779897022839092054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_43
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423962b12083555f0800000000000000
+      internalID: -768646579700198620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_44
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356bb6ef19a3c95d0800000000000000
+      internalID: -3054502048550898093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_45
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad469ee24c3847a00800000000000000
+      internalID: 753371916301591770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_46
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd025c03860c6310800000000000000
+      internalID: 1399500744122568181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_47
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6925720e21ac35220800000000000000
+      internalID: 2473542802775429782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_48
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6acab7b389f1b6db0800000000000000
+      internalID: -4797706239339680602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_49
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b6a293b83da7c00800000000000000
+      internalID: 899263670526831414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_50
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56650b4a4ab24a140800000000000000
+      internalID: 4729953494783514213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_51
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c46d87386df0c550800000000000000
+      internalID: 6179217312802759877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_52
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09154f97d26846290800000000000000
+      internalID: -7898040316623302256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_53
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23f80c7f22beec40800000000000000
+      internalID: 5543564108353827630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_54
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35270556c5a174b80800000000000000
+      internalID: -8410724794952027565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_55
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 629e9fe49839e23e0800000000000000
+      internalID: -2076560160226416346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_56
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 135
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa3e68934397fb20800000000000000
+      internalID: 3168162781407886067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c1101dc2abf9590800000000000000
+      internalID: -7665203339113456575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_58
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5104958bbe5652c50800000000000000
+      internalID: 6639825288712241173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_59
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f853eaa8a957abcf0800000000000000
+      internalID: -235746723871443569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_60
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ee7b7f27bbe2a6d0800000000000000
+      internalID: -2980560831357681951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_61
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f9eb0c4e958b720800000000000000
+      internalID: 2862136402215083804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_62
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec0c10311945d020800000000000000
+      internalID: 2365877517423480041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_63
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ab1d1804d4f2490800000000000000
+      internalID: -7768905892739564907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_64
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6394773b746e2380800000000000000
+      internalID: -8994140925438160022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_65
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2634adbf84ea7f840800000000000000
+      internalID: 5257862718464607074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_66
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cc354839737bdce0800000000000000
+      internalID: -1379381896386626359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_67
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2f487f71d6f8f790800000000000000
+      internalID: -7495970200111001813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_68
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a96a21d96caf5ca0800000000000000
+      internalID: -6025908205917673051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_69
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9278939629692b100800000000000000
+      internalID: 122325695467194153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_70
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cae21c95b31bb20800000000000000
+      internalID: 3148362871187876985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_71
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4214c7a3fdc5110800000000000000
+      internalID: 1251120238787896562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_72
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42fca87e6414511a0800000000000000
+      internalID: -6839488686304080092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_73
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d0b078ca02361d0800000000000000
+      internalID: -3358804971716145849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_74
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c569c9a36edf711f0800000000000000
+      internalID: -1074110820836927908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_75
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 118
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daf8970b253c26400800000000000000
+      internalID: 316029683784847277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b8d0298a7a978e0800000000000000
+      internalID: -1695139442281575653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_77
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 221e379961ffdbd40800000000000000
+      internalID: 5601913984047636770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_78
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27cd8500aa05d2d0800000000000000
+      internalID: -3254683473301092564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_79
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 934ac324983aab190800000000000000
+      internalID: -7945858782624701383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_80
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2732a1077228a9b0800000000000000
+      internalID: -5068763486081632469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_81
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b594d3edecfd365e0800000000000000
+      internalID: -1917442936744883877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_82
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c112de08d56ae0ad0800000000000000
+      internalID: -2734065003242118884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_83
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f8447f71a78a4d0800000000000000
+      internalID: -3123112098230136949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_84
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bf8a2f35fc7d49d0800000000000000
+      internalID: -2788435201503883336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_85
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971f118b92510dd30800000000000000
+      internalID: 4454083300395446649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_86
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81d5cc46aacccc00800000000000000
+      internalID: 922334839305523596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_87
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba8f1b3ed01624a0800000000000000
+      internalID: -6618584055713658181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_88
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d04ec74718d4d5a00800000000000000
+      internalID: 746838331613832205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_89
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 050a6b223542c5080800000000000000
+      internalID: -9197436399514116016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_90
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cbb2b4dad4c06b10800000000000000
+      internalID: 1972793080938675141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_91
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3117ca5fe489fab40800000000000000
+      internalID: 5453745138665550099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_92
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8197772f1d9dfb0800000000000000
+      internalID: -4622432703202387766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_93
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 592cb926c5ebbe390800000000000000
+      internalID: -7787921826606497131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_94
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 101
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c0401b47dce8dc80800000000000000
+      internalID: -8297621904008658745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd35f64bbea6ff550800000000000000
+      internalID: 6196789172862145501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_96
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83c0629f70882d90800000000000000
+      internalID: -7122301525281422453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_97
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd73a728275eab20800000000000000
+      internalID: 3147549019553889746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_98
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e741ee8a3ebe623a0800000000000000
+      internalID: -6690400833388014466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_99
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e19c86b8c7bdaf0800000000000000
+      internalID: -370565606127624638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_100
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ac8e4a5400de5f00800000000000000
+      internalID: 1107551275493264548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_101
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c19f617b0902f80800000000000000
+      internalID: -8133341810992276400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_102
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c20ef221e892db830800000000000000
+      internalID: 4088469726889500716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_103
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a7f6475747f9a70800000000000000
+      internalID: 8835909041737660968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_104
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3681dd7cc0626120800000000000000
+      internalID: 2405591582369744445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_105
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0763211adb4596290800000000000000
+      internalID: -7896687298189576592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_106
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d06637058fd757e0800000000000000
+      internalID: -1776705765529722667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_107
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c12e648ca415f2d0800000000000000
+      internalID: -3245665225261833792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_108
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b5c9dfcd02fdcf40800000000000000
+      internalID: 5750518440357643704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_109
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 602f5833fd4b0a370800000000000000
+      internalID: 8331858181370540550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_110
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d20fbb54277d69a50800000000000000
+      internalID: 6527641595716300845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_111
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937263db3a8ad8460800000000000000
+      internalID: 7245632796716574521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_112
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d717250462f34c110800000000000000
+      internalID: 1280217627600515453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_113
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 84
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c855db6d4f701b30800000000000000
+      internalID: 4256041618363472068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_114
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80c2a56cc5fb06d0800000000000000
+      internalID: -3023052466621857651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_115
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607d7007cc05cb2c0800000000000000
+      internalID: -4414564695746816250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_116
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b578ad5cfd901d070800000000000000
+      internalID: 8129289659082245979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_117
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60bfd4e4269ecff40800000000000000
+      internalID: 5763738231557192454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_118
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50d1a8c2c2636580800000000000000
+      internalID: -8835109455241555875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_119
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6d0b6abbfe50f00800000000000000
+      internalID: 1082534874687002344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_120
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c1ae7cb63a9a850800000000000000
+      internalID: 6388817229712596075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_121
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6deec7f650f8fdd30800000000000000
+      internalID: 4458439409628147414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_122
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9445e7649976d7280800000000000000
+      internalID: -9043958568679746487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_123
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e7da2cb8ef47db0800000000000000
+      internalID: -4794927827022676344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_124
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df0b05e9b83189120800000000000000
+      internalID: 2420706290089111805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_125
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee818b055a1fb95a0800000000000000
+      internalID: -6513346743735150354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_126
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9d8447856463060800000000000000
+      internalID: 6932806022105455078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_127
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ead5f6e9343ee3010800000000000000
+      internalID: 1170622832723320238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_128
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e449c4566788d6e50800000000000000
+      internalID: 6804244654113723470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_129
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1194705a0e1a6f40800000000000000
+      internalID: 5722419306175959327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_130
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b689a315abf090c0800000000000000
+      internalID: -4570876935363000650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_131
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ee0b2389ed84a30800000000000000
+      internalID: 4199851397789838891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_132
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 67
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4ef7ecd9fe8ac00800000000000000
+      internalID: 912242385595917488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_133
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b04ec08e0a38dc70800000000000000
+      internalID: 8996004089637519538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_134
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8613b0e7606d80e0800000000000000
+      internalID: -2266049038229760371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_135
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c50ff826ec226bd0800000000000000
+      internalID: -2638497064643787320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_136
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d7375e9f9ff3ae0800000000000000
+      internalID: -1567259293609919140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_137
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3553dba65694fb850800000000000000
+      internalID: 6394910695820703059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_138
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1a1391f185c6ed0800000000000000
+      internalID: -2419462009214885430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_139
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09bcd841464a8e830800000000000000
+      internalID: 4100708210469358480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_140
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72348999de1879410800000000000000
+      internalID: 1483797459725992743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_141
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb21fdbb02445f70800000000000000
+      internalID: 9175030959059315711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_142
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50bb5496099bb9e0800000000000000
+      internalID: -1604520588689559459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_143
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23199582c63666130800000000000000
+      internalID: 3559641871667532082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_144
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8d675de5e7fa7e20800000000000000
+      internalID: 3349261839804886412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_145
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3ec2eb02bc9f630800000000000000
+      internalID: 3961420688739066820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_146
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f2a1a527f6915d0800000000000000
+      internalID: -3091317132284514503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_147
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c50221649372eff50800000000000000
+      internalID: 6917009204629872732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_148
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2603d03ad46b78d0800000000000000
+      internalID: -2847571451096922581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_149
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f23ce3bc69a0ca1f0800000000000000
+      internalID: -1032438571803426001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_150
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 50
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07760b690c005ba30800000000000000
+      internalID: 4230288252146313072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_151
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0b82bbcda0884f0800000000000000
+      internalID: -826398588473396993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_152
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a476a35b2a4370940800000000000000
+      internalID: 5262232563035563850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_153
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4526fce46e5e2aae0800000000000000
+      internalID: -1539415345279835564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_154
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d84b097e4425ce0800000000000000
+      internalID: -1417995171312399098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_155
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b1142089d00a520800000000000000
+      internalID: 2711181922201049937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_156
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d35fa769ed8e5830800000000000000
+      internalID: 4061839947541205972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_157
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b40df3d8bae70d0800000000000000
+      internalID: -3423110043605644475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_158
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7708ee16294875f70800000000000000
+      internalID: 9175948530033786999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_159
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2ef34959e8c7980800000000000000
+      internalID: -8539794020312816935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_160
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf87bf5419416a010800000000000000
+      internalID: 1199668964917737724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_161
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e3e769caf2eb29a0800000000000000
+      internalID: -6256657690552441882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_162
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407b770334d68e230800000000000000
+      internalID: 3668302031836657412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_163
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e65abfcf93091d0800000000000000
+      internalID: -3346110764419813755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_164
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4deeb695d5fe336f0800000000000000
+      internalID: -705957532355793196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_165
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07226c7e07fe65e80800000000000000
+      internalID: -8190095604122770832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_166
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7c6ef102789e850800000000000000
+      internalID: 6406800516955162536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_167
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 33
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19cfedb8356e208d0800000000000000
+      internalID: -2881487565060375407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe385032be5fced0800000000000000
+      internalID: -2391588757702164737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_169
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7307ff05d9cb850800000000000000
+      internalID: 6394158542167750602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_170
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f848dc002c7c1d380800000000000000
+      internalID: -8948151348557413233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_171
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22bcbc37a2d4ab910800000000000000
+      internalID: 1853879041343081250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_172
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89b6da70092e01c30800000000000000
+      internalID: 4328208350135020440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_173
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fea978e2d25f90b0800000000000000
+      internalID: -5719761935940342030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_174
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d99c175f30aafa0800000000000000
+      internalID: -5788810018320441994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_175
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2375f83044214530800000000000000
+      internalID: 3837388215748490030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_176
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92331cd2c055f3d20800000000000000
+      internalID: 3260418166035133225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_177
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36677d4690b5d1460800000000000000
+      internalID: 7214022274022078051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_178
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b552fa21e6324ab0800000000000000
+      internalID: -5025393893475985991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_179
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e30b143d2d10c7e0800000000000000
+      internalID: -1747364575434832927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_180
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ca61955a0d45070800000000000000
+      internalID: 8094323838874463329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_181
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723b8e303dffedee0800000000000000
+      internalID: -1234267966084173017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_182
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082391dcc7b27a000800000000000000
+      internalID: 47054136127599232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_183
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dffe702118e5ffa80800000000000000
+      internalID: -8430916068967976963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_184
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562c2991c5f6db040800000000000000
+      internalID: 4665007230382424677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_185
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 473b63a19a44f2070800000000000000
+      internalID: 8083755349233283956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DesertVaniaTileset_186
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 16
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2330ce54a261fc0800000000000000
+      internalID: -3524583178570091830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 07f151421bd42f044b06931f7866b522
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DesertVaniaTileset_0: 3808919165762555011
+      DesertVaniaTileset_1: -2089564438004220349
+      DesertVaniaTileset_10: 6412760833822676428
+      DesertVaniaTileset_100: 1107551275493264548
+      DesertVaniaTileset_101: -8133341810992276400
+      DesertVaniaTileset_102: 4088469726889500716
+      DesertVaniaTileset_103: 8835909041737660968
+      DesertVaniaTileset_104: 2405591582369744445
+      DesertVaniaTileset_105: -7896687298189576592
+      DesertVaniaTileset_106: -1776705765529722667
+      DesertVaniaTileset_107: -3245665225261833792
+      DesertVaniaTileset_108: 5750518440357643704
+      DesertVaniaTileset_109: 8331858181370540550
+      DesertVaniaTileset_11: 5612266872156225031
+      DesertVaniaTileset_110: 6527641595716300845
+      DesertVaniaTileset_111: 7245632796716574521
+      DesertVaniaTileset_112: 1280217627600515453
+      DesertVaniaTileset_113: 4256041618363472068
+      DesertVaniaTileset_114: -3023052466621857651
+      DesertVaniaTileset_115: -4414564695746816250
+      DesertVaniaTileset_116: 8129289659082245979
+      DesertVaniaTileset_117: 5763738231557192454
+      DesertVaniaTileset_118: -8835109455241555875
+      DesertVaniaTileset_119: 1082534874687002344
+      DesertVaniaTileset_12: 5503312058523516193
+      DesertVaniaTileset_120: 6388817229712596075
+      DesertVaniaTileset_121: 4458439409628147414
+      DesertVaniaTileset_122: -9043958568679746487
+      DesertVaniaTileset_123: -4794927827022676344
+      DesertVaniaTileset_124: 2420706290089111805
+      DesertVaniaTileset_125: -6513346743735150354
+      DesertVaniaTileset_126: 6932806022105455078
+      DesertVaniaTileset_127: 1170622832723320238
+      DesertVaniaTileset_128: 6804244654113723470
+      DesertVaniaTileset_129: 5722419306175959327
+      DesertVaniaTileset_13: 242332661806796135
+      DesertVaniaTileset_130: -4570876935363000650
+      DesertVaniaTileset_131: 4199851397789838891
+      DesertVaniaTileset_132: 912242385595917488
+      DesertVaniaTileset_133: 8996004089637519538
+      DesertVaniaTileset_134: -2266049038229760371
+      DesertVaniaTileset_135: -2638497064643787320
+      DesertVaniaTileset_136: -1567259293609919140
+      DesertVaniaTileset_137: 6394910695820703059
+      DesertVaniaTileset_138: -2419462009214885430
+      DesertVaniaTileset_139: 4100708210469358480
+      DesertVaniaTileset_14: 6363501018141058760
+      DesertVaniaTileset_140: 1483797459725992743
+      DesertVaniaTileset_141: 9175030959059315711
+      DesertVaniaTileset_142: -1604520588689559459
+      DesertVaniaTileset_143: 3559641871667532082
+      DesertVaniaTileset_144: 3349261839804886412
+      DesertVaniaTileset_145: 3961420688739066820
+      DesertVaniaTileset_146: -3091317132284514503
+      DesertVaniaTileset_147: 6917009204629872732
+      DesertVaniaTileset_148: -2847571451096922581
+      DesertVaniaTileset_149: -1032438571803426001
+      DesertVaniaTileset_15: 1585367218598510758
+      DesertVaniaTileset_150: 4230288252146313072
+      DesertVaniaTileset_151: -826398588473396993
+      DesertVaniaTileset_152: 5262232563035563850
+      DesertVaniaTileset_153: -1539415345279835564
+      DesertVaniaTileset_154: -1417995171312399098
+      DesertVaniaTileset_155: 2711181922201049937
+      DesertVaniaTileset_156: 4061839947541205972
+      DesertVaniaTileset_157: -3423110043605644475
+      DesertVaniaTileset_158: 9175948530033786999
+      DesertVaniaTileset_159: -8539794020312816935
+      DesertVaniaTileset_16: 7900807859727981771
+      DesertVaniaTileset_160: 1199668964917737724
+      DesertVaniaTileset_161: -6256657690552441882
+      DesertVaniaTileset_162: 3668302031836657412
+      DesertVaniaTileset_163: -3346110764419813755
+      DesertVaniaTileset_164: -705957532355793196
+      DesertVaniaTileset_165: -8190095604122770832
+      DesertVaniaTileset_166: 6406800516955162536
+      DesertVaniaTileset_167: -2881487565060375407
+      DesertVaniaTileset_168: -2391588757702164737
+      DesertVaniaTileset_169: 6394158542167750602
+      DesertVaniaTileset_17: -2578243851171750475
+      DesertVaniaTileset_170: -8948151348557413233
+      DesertVaniaTileset_171: 1853879041343081250
+      DesertVaniaTileset_172: 4328208350135020440
+      DesertVaniaTileset_173: -5719761935940342030
+      DesertVaniaTileset_174: -5788810018320441994
+      DesertVaniaTileset_175: 3837388215748490030
+      DesertVaniaTileset_176: 3260418166035133225
+      DesertVaniaTileset_177: 7214022274022078051
+      DesertVaniaTileset_178: -5025393893475985991
+      DesertVaniaTileset_179: -1747364575434832927
+      DesertVaniaTileset_18: 4353140955801494680
+      DesertVaniaTileset_180: 8094323838874463329
+      DesertVaniaTileset_181: -1234267966084173017
+      DesertVaniaTileset_182: 47054136127599232
+      DesertVaniaTileset_183: -8430916068967976963
+      DesertVaniaTileset_184: 4665007230382424677
+      DesertVaniaTileset_185: 8083755349233283956
+      DesertVaniaTileset_186: -3524583178570091830
+      DesertVaniaTileset_19: -5943353069951725202
+      DesertVaniaTileset_2: -3294139894298993470
+      DesertVaniaTileset_20: 212396918287012524
+      DesertVaniaTileset_21: -8408351453087975122
+      DesertVaniaTileset_22: 5617571137211824609
+      DesertVaniaTileset_23: -7496839966779476702
+      DesertVaniaTileset_24: -7863353756500065568
+      DesertVaniaTileset_25: 7874861303505646762
+      DesertVaniaTileset_26: 744424674576036346
+      DesertVaniaTileset_27: -3162342745894354661
+      DesertVaniaTileset_28: 1482265171092499052
+      DesertVaniaTileset_29: -3477643785571289278
+      DesertVaniaTileset_3: -8409487366643164450
+      DesertVaniaTileset_30: 8819562621801167782
+      DesertVaniaTileset_31: -2133717373407564687
+      DesertVaniaTileset_32: 9195556555489867673
+      DesertVaniaTileset_33: 8396893859417481772
+      DesertVaniaTileset_34: 2346924944086252028
+      DesertVaniaTileset_35: 5662631366255136013
+      DesertVaniaTileset_36: -2332484095046958765
+      DesertVaniaTileset_37: 517758405279493485
+      DesertVaniaTileset_38: -5944311540280752044
+      DesertVaniaTileset_39: -940828479187226047
+      DesertVaniaTileset_4: 2591218301200944794
+      DesertVaniaTileset_40: -8727596754665269001
+      DesertVaniaTileset_41: 8584232733204562677
+      DesertVaniaTileset_42: -8779897022839092054
+      DesertVaniaTileset_43: -768646579700198620
+      DesertVaniaTileset_44: -3054502048550898093
+      DesertVaniaTileset_45: 753371916301591770
+      DesertVaniaTileset_46: 1399500744122568181
+      DesertVaniaTileset_47: 2473542802775429782
+      DesertVaniaTileset_48: -4797706239339680602
+      DesertVaniaTileset_49: 899263670526831414
+      DesertVaniaTileset_5: 8596461481123908775
+      DesertVaniaTileset_50: 4729953494783514213
+      DesertVaniaTileset_51: 6179217312802759877
+      DesertVaniaTileset_52: -7898040316623302256
+      DesertVaniaTileset_53: 5543564108353827630
+      DesertVaniaTileset_54: -8410724794952027565
+      DesertVaniaTileset_55: -2076560160226416346
+      DesertVaniaTileset_56: 3168162781407886067
+      DesertVaniaTileset_57: -7665203339113456575
+      DesertVaniaTileset_58: 6639825288712241173
+      DesertVaniaTileset_59: -235746723871443569
+      DesertVaniaTileset_6: 2443266353930767567
+      DesertVaniaTileset_60: -2980560831357681951
+      DesertVaniaTileset_61: 2862136402215083804
+      DesertVaniaTileset_62: 2365877517423480041
+      DesertVaniaTileset_63: -7768905892739564907
+      DesertVaniaTileset_64: -8994140925438160022
+      DesertVaniaTileset_65: 5257862718464607074
+      DesertVaniaTileset_66: -1379381896386626359
+      DesertVaniaTileset_67: -7495970200111001813
+      DesertVaniaTileset_68: -6025908205917673051
+      DesertVaniaTileset_69: 122325695467194153
+      DesertVaniaTileset_7: -4676986335614650493
+      DesertVaniaTileset_70: 3148362871187876985
+      DesertVaniaTileset_71: 1251120238787896562
+      DesertVaniaTileset_72: -6839488686304080092
+      DesertVaniaTileset_73: -3358804971716145849
+      DesertVaniaTileset_74: -1074110820836927908
+      DesertVaniaTileset_75: 316029683784847277
+      DesertVaniaTileset_76: -1695139442281575653
+      DesertVaniaTileset_77: 5601913984047636770
+      DesertVaniaTileset_78: -3254683473301092564
+      DesertVaniaTileset_79: -7945858782624701383
+      DesertVaniaTileset_8: 2182017420965025167
+      DesertVaniaTileset_80: -5068763486081632469
+      DesertVaniaTileset_81: -1917442936744883877
+      DesertVaniaTileset_82: -2734065003242118884
+      DesertVaniaTileset_83: -3123112098230136949
+      DesertVaniaTileset_84: -2788435201503883336
+      DesertVaniaTileset_85: 4454083300395446649
+      DesertVaniaTileset_86: 922334839305523596
+      DesertVaniaTileset_87: -6618584055713658181
+      DesertVaniaTileset_88: 746838331613832205
+      DesertVaniaTileset_89: -9197436399514116016
+      DesertVaniaTileset_9: -3280456349853187285
+      DesertVaniaTileset_90: 1972793080938675141
+      DesertVaniaTileset_91: 5453745138665550099
+      DesertVaniaTileset_92: -4622432703202387766
+      DesertVaniaTileset_93: -7787921826606497131
+      DesertVaniaTileset_94: -8297621904008658745
+      DesertVaniaTileset_95: 6196789172862145501
+      DesertVaniaTileset_96: -7122301525281422453
+      DesertVaniaTileset_97: 3147549019553889746
+      DesertVaniaTileset_98: -6690400833388014466
+      DesertVaniaTileset_99: -370565606127624638
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
