@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 5047186}
   - component: {fileID: 5047185}
   - component: {fileID: 5047187}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Pared
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -201,8 +201,8 @@ Transform:
   m_GameObject: {fileID: 5047184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.91, z: 0}
-  m_LocalScale: {x: 0.77, y: 5.1529374, z: 1}
+  m_LocalPosition: {x: 0, y: -2.0912, z: 0}
+  m_LocalScale: {x: 0.77, y: 4.790686, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 122914408}
   - component: {fileID: 122914407}
   - component: {fileID: 122914409}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Plataforma (1)
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
@@ -467,6 +467,140 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &270017706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 270017709}
+  - component: {fileID: 270017708}
+  - component: {fileID: 270017707}
+  m_Layer: 10
+  m_Name: Plataforma (5)
+  m_TagString: Plataforma
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!61 &270017707
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270017706}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &270017708
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270017706}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &270017709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270017706}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15.38, y: 8.39, z: 0}
+  m_LocalScale: {x: 16.676422, y: 0.75, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &350564099
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +643,7 @@ GameObject:
   - component: {fileID: 402162421}
   - component: {fileID: 402162420}
   - component: {fileID: 402162419}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Plataforma (3)
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
@@ -938,8 +1072,6 @@ GameObject:
   m_Component:
   - component: {fileID: 972324009}
   - component: {fileID: 972324008}
-  - component: {fileID: 972324006}
-  - component: {fileID: 972324010}
   - component: {fileID: 972324007}
   m_Layer: 0
   m_Name: Player
@@ -948,33 +1080,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &972324006
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972324004}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
 --- !u!114 &972324007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -987,25 +1092,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0aeaf6ef470f5c499d667760655ff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  groundCheck: {fileID: 350564100}
   masa: 1.2
-  gravedadRelativa: 1
+  gravedad: 9.81
   coefRestitucion: 0.6
   velocidadMax: 10
   aceleracionSuelo: 60
   aceleracionAire: 20
-  dragSuelo: 3.5
-  dragAire: 0
-  impulsoSalto: 12
-  reboteSuave: 0.3
-  umbralRebote: 3
-  impulsoReboteVerticalExtra: 2.5
-  groundCheck: {fileID: 350564100}
-  groundRadius: 0.18
+  friccionSuelo: 8
+  friccionAire: 2
+  alturaMaxSalto: 2.5
+  alturaMaxRebote: 1.8
+  groundRadius: 0.12
   groundMask:
     serializedVersion: 2
-    m_Bits: 640
+    m_Bits: 1664
+  radioColision: 0.5
+  skin: 0.05
+  fuerzaEmpujeCajas: 20
   jumpBufferTime: 0.2
   coyoteTime: 0.15
+  limitarX: 0
+  xMin: -20
+  xMax: 20
+  limitarY: 1
+  yMin: -10
+  debugGround: 1
 --- !u!212 &972324008
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1077,42 +1190,6 @@ Transform:
   - {fileID: 350564100}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &972324010
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972324004}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 49108ade10f72cb43b26561f749dcdc9, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
 --- !u!1 &980424719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1201,7 @@ GameObject:
   - component: {fileID: 980424722}
   - component: {fileID: 980424721}
   - component: {fileID: 980424720}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Plataforma (4)
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
@@ -1241,8 +1318,8 @@ Transform:
   m_GameObject: {fileID: 980424719}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.49, y: 4.39, z: 0}
-  m_LocalScale: {x: 26.93652, y: 1.2430441, z: 1}
+  m_LocalPosition: {x: 20.49, y: 7.3922, z: 0}
+  m_LocalScale: {x: 26.93652, y: 10.501287, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1420,7 +1497,7 @@ GameObject:
   - component: {fileID: 1595219858}
   - component: {fileID: 1595219857}
   - component: {fileID: 1595219856}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Pared (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1554,7 +1631,7 @@ GameObject:
   - component: {fileID: 1916526835}
   - component: {fileID: 1916526834}
   - component: {fileID: 1916526836}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Plataforma
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1688,7 +1765,7 @@ GameObject:
   - component: {fileID: 2085340515}
   - component: {fileID: 2085340514}
   - component: {fileID: 2085340516}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Plataforma (2)
   m_TagString: Plataforma
   m_Icon: {fileID: 0}
@@ -1975,6 +2052,7 @@ SceneRoots:
   - {fileID: 1595219858}
   - {fileID: 1916526835}
   - {fileID: 122914408}
+  - {fileID: 270017709}
   - {fileID: 2085340515}
   - {fileID: 980424722}
   - {fileID: 402162421}

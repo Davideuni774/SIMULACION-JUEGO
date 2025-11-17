@@ -1,79 +1,333 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
+// Movimiento físico SIN Rigidbody2D ni Collider2D en el jugador.
+// Colisión con suelo, paredes y cajas usando Physics2D.
+
 public class JugadorFisico : MonoBehaviour
 {
+    [Header("Referencias")]
     public Animator animator;
+    public Transform groundCheck;
+
     [Header("Física básica")]
     public float masa = 1.2f;
-    [Tooltip("1 = gravedad normal; >1 = caída más rápida")]
-    public float gravedadRelativa = 1.2f;
+    public float gravedad = 9.81f;
     [Range(0f, 1f)] public float coefRestitucion = 0.6f;
 
-    [Header("Movimiento")]
-    public float velocidadMax = 6f;
+    [Header("Movimiento horizontal")]
+    public float velocidadMax = 10f;
     public float aceleracionSuelo = 60f;
     public float aceleracionAire = 20f;
-    public float dragSuelo = 6f;
-    public float dragAire = 1f;
+    public float friccionSuelo = 8f;
+    public float friccionAire = 2f;
 
-    [Header("Salto y Rebote")]
-    public float impulsoSalto = 8f;
-    [Tooltip("Fracción de la velocidad vertical que se conserva al rebotar")]
-    public float reboteSuave = 0.3f;
-    public float umbralRebote = 3f;
+    [Header("Salto / Rebote")]
+    public float alturaMaxSalto = 2.5f;
+    public float alturaMaxRebote = 1.8f;
 
-    [Header("Ground Check")]
-    public Transform groundCheck;
-    public float groundRadius = 0.08f;
-    public LayerMask groundMask;
+    [Header("Ground check (plataformas, suelo, cajas)")]
+    public float groundRadius = 0.15f;
+    public LayerMask groundMask;    // aquí metes Ground, Cajas, LP
+
+    [Header("Colisión (paredes / cajas)")]
+    public float radioColision = 0.3f;   // radio del "cuerpo" del jugador
+    public float skin = 0.03f;           // margen para no pegarse dentro del collider
+    public float fuerzaEmpujeCajas = 20f;
 
     [Header("Tiempos de gracia")]
-    public float jumpBufferTime = 0.15f;  // margen para no perder saltos
-    public float coyoteTime = 0.1f;       // permite saltar poco después de caer
+    public float jumpBufferTime = 0.2f;
+    public float coyoteTime = 0.15f;
 
-    // Estado
+    [Header("Límites del mundo")]
+    public bool limitarX = true;
+    public float xMin = -20f, xMax = 20f;
+    public bool limitarY = true;
+    public float yMin = -10f;
+
+    [Header("Debug")]
+    public bool debugGround = true;
+
+    // --- Estado interno ---
+    private Vector2 velocidad;
+    private float velSalto;
+    private float velReboteMax;
+    private float offsetGroundY;
+
     private bool enSuelo;
     private bool enSueloPrevio;
-    private float vyPrevio;
+    private float coyoteCounter;
+    private float jumpBufferCounter;
+    private float vyAntesDeIntegrar;
 
-    // Input
     private float inputX;
-    private bool jumpPressed;
-    private bool jumpHeld;
 
-    // Temporizadores
-    private float jumpBufferCounter = 0f;
-    private float coyoteCounter = 0f;
-
-    private Rigidbody2D rb;
-
-    void Awake()
+    void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.mass = masa;
-        rb.gravityScale = gravedadRelativa;
-        rb.freezeRotation = true;
-        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+        if (groundCheck != null)
+            offsetGroundY = transform.position.y - groundCheck.position.y;
 
-        var mat = new PhysicsMaterial2D("ReboteNatural")
-        {
-            bounciness = coefRestitucion,
-            friction = 0.8f
-        };
-        rb.sharedMaterial = mat;
+        float g = Mathf.Abs(gravedad);
+        velSalto = Mathf.Sqrt(2f * g * Mathf.Max(alturaMaxSalto, 0.01f));
+        velReboteMax = Mathf.Sqrt(2f * g * Mathf.Max(alturaMaxRebote, 0.01f));
     }
 
     void Update()
     {
-        vyPrevio = rb.linearVelocity.y;
         LeerInput();
+    }
+
+    void FixedUpdate()
+    {
+        float dt = Time.fixedDeltaTime;
+
+        // -------- 1) DETECCIÓN DE SUELO (ANTES DE MOVER) --------
+        Collider2D colSuelo = null;
+        bool sueloAhora = false;
+
+        if (groundCheck != null)
+        {
+            colSuelo = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
+            sueloAhora = colSuelo != null;
+
+            if (debugGround)
+            {
+                Color c = sueloAhora ? Color.green : Color.red;
+                Debug.DrawLine(
+                    groundCheck.position,
+                    groundCheck.position + Vector3.down * groundRadius,
+                    c
+                );
+            }
+        }
+
+        if (sueloAhora)
+            coyoteCounter = coyoteTime;
+        else
+            coyoteCounter -= dt;
+
+        // -------- 2) MOVIMIENTO HORIZONTAL --------
+        float objetivoVX = inputX * velocidadMax;
+        float accel = sueloAhora ? aceleracionSuelo : aceleracionAire;
+        velocidad.x = Mathf.MoveTowards(velocidad.x, objetivoVX, accel * dt);
+
+        if (Mathf.Approximately(inputX, 0f))
+        {
+            float fric = sueloAhora ? friccionSuelo : friccionAire;
+            velocidad.x = Mathf.MoveTowards(velocidad.x, 0f, fric * dt);
+        }
+
+        // -------- 3) SALTO --------
+        if (jumpBufferCounter > 0f && coyoteCounter > 0f)
+        {
+            velocidad.y = velSalto;
+            sueloAhora = false;
+            coyoteCounter = 0f;
+            jumpBufferCounter = 0f;
+        }
+
+        // -------- 4) ACELERACIÓN VERTICAL --------
+        float aY = -gravedad;
+        if (sueloAhora && velocidad.y <= 0f)
+        {
+            aY = 0f;
+            velocidad.y = 0f;
+        }
+
+        vyAntesDeIntegrar = velocidad.y;
+        velocidad.y += aY * dt;
+
+        // -------- 5) INTEGRACIÓN CON COLISIÓN EN X/Y --------
+        Vector2 pos = transform.position;
+
+        // --- X: paredes / cajas ---
+        float movX = velocidad.x * dt;
+        if (Mathf.Abs(movX) > 0.0001f)
+        {
+            Vector2 dirX = new Vector2(Mathf.Sign(movX), 0f);
+            float distX = Mathf.Abs(movX) + skin;
+
+            // Origen un poco elevado para evitar enganchar la esquina del suelo
+            Vector2 origenX = pos + Vector2.up * (radioColision * 0.5f);
+
+            RaycastHit2D hitX = Physics2D.CircleCast(origenX, radioColision, dirX, distX, groundMask);
+            if (hitX.collider != null)
+            {
+                float nuevoX = hitX.point.x - dirX.x * (radioColision + skin);
+                pos.x = nuevoX;
+                velocidad.x = 0f;
+
+                // Empuje de cajas
+                Rigidbody2D rbCaja = hitX.rigidbody;
+                if (rbCaja != null && hitX.collider.CompareTag("Caja"))
+                {
+                    rbCaja.AddForce(new Vector2(dirX.x * fuerzaEmpujeCajas, 0f),
+                                    ForceMode2D.Force);
+                }
+            }
+            else
+            {
+                pos.x += movX;
+            }
+        }
+
+        // --- Y: caída / salto (colisión vertical) ---
+        float movY = velocidad.y * dt;
+
+        if (Mathf.Abs(movY) > 0.0001f)
+        {
+            Vector2 dirY = new Vector2(0f, Mathf.Sign(movY));
+            float distY = Mathf.Abs(movY) + skin;
+
+            RaycastHit2D hitY = Physics2D.CircleCast(pos, radioColision, dirY, distY, groundMask);
+
+            if (hitY.collider != null)
+            {
+                Vector2 n = hitY.normal;
+
+                // Solo consideramos "suelo" o "techo" verdaderos:
+                // - si caemos (dirY.y < 0) queremos normales con componente Y positiva (suelo)
+                // - si subimos (dirY.y > 0) queremos normales con componente Y negativa (techo)
+                bool esSueloValido = dirY.y < 0f && n.y > 0.5f;
+                bool esTechoValido = dirY.y > 0f && n.y < -0.5f;
+                bool resolverY = esSueloValido || esTechoValido;
+
+                if (resolverY)
+                {
+                    float nuevoY = hitY.point.y - dirY.y * (radioColision + skin);
+                    pos.y = nuevoY;
+                    velocidad.y = 0f;
+                }
+                else
+                {
+                    // Si la normal es casi horizontal (pared/esquina), dejamos que pase en Y
+                    pos.y += movY;
+                }
+            }
+            else
+            {
+                pos.y += movY;
+            }
+        }
+        else
+        {
+            pos.y += movY;
+        }
+
+        // Límite Y (para que no caiga al vacío infinito)
+        if (limitarY && pos.y < yMin)
+        {
+            pos.y = yMin;
+            velocidad.y = 0f;
+        }
+
+        // Límite X global opcional
+        if (limitarX)
+        {
+            if (pos.x < xMin)
+            {
+                pos.x = xMin;
+                velocidad.x = 0f;
+            }
+            else if (pos.x > xMax)
+            {
+                pos.x = xMax;
+                velocidad.x = 0f;
+            }
+        }
+
+        transform.position = pos;
+
+        // -------- 6) CHEQUEO DE ATERRIZAJE + REBOTE --------
+        enSueloPrevio = enSuelo;
+
+        if (groundCheck != null)
+        {
+            colSuelo = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
+            enSuelo = colSuelo != null;
+        }
+        else
+        {
+            enSuelo = false;
+        }
+
+        if (!enSueloPrevio && enSuelo && vyAntesDeIntegrar < 0f)
+        {
+            if (colSuelo != null)
+            {
+                pos = transform.position;
+                float sueloY = colSuelo.bounds.max.y;
+                pos.y = sueloY + offsetGroundY;
+                transform.position = pos;
+            }
+
+            float vyImpacto = -vyAntesDeIntegrar;
+            float vyRebote = Mathf.Min(vyImpacto * coefRestitucion, velReboteMax);
+
+            if (vyRebote < 0.5f)
+            {
+                velocidad.y = 0f;
+            }
+            else
+            {
+                velocidad.y = vyRebote;
+                enSuelo = false;
+            }
+        }
+
+        // -------- 7) ANIMACIÓN --------
+        if (animator != null)
+        {
+            animator.SetBool("Grounded", enSuelo);
+            animator.SetFloat("Speed", Mathf.Abs(velocidad.x));
+            animator.SetFloat("VelY", velocidad.y);
+        }
+
+        if (inputX < -0.01f)
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        else if (inputX > 0.01f)
+            transform.localScale = new Vector3(1f, 1f, 1f);
+
+        // -------- 8) CORREGIR PENETRACIONES (por si quedó dentro de algo) --------
+        ResolverPenetraciones();
+    }
+
+    // Saca al jugador de cualquier collider en el que haya quedado metido
+    void ResolverPenetraciones()
+    {
+        Vector2 pos = transform.position;
+
+        Collider2D[] overlaps = Physics2D.OverlapCircleAll(
+            pos,
+            radioColision,
+            groundMask
+        );
+
+        foreach (var col in overlaps)
+        {
+            Vector2 p = col.ClosestPoint(pos);
+            Vector2 delta = pos - p;
+            float dist = delta.magnitude;
+
+            if (dist < 0.0001f)
+            {
+                delta = Vector2.up;
+                dist = 0.0001f;
+            }
+
+            float penetracion = radioColision - dist;
+
+            if (penetracion > 0f)
+            {
+                pos += delta.normalized * penetracion;
+            }
+        }
+
+        transform.position = pos;
     }
 
     void LeerInput()
     {
-        // --- Movimiento horizontal (A/D o flechas) ---
+        // Horizontal
         float axisX = 0f;
         try { axisX = Input.GetAxisRaw("Horizontal"); } catch { axisX = 0f; }
 
@@ -84,94 +338,17 @@ public class JugadorFisico : MonoBehaviour
         }
         inputX = Mathf.Clamp(axisX, -1f, 1f);
 
-        // --- Saltar (detectar pulsación y mantener) ---
-        jumpPressed = Input.GetButtonDown("Jump") ||
-                      Input.GetKeyDown(KeyCode.Space) ||
-                      Input.GetKeyDown(KeyCode.W) ||
-                      Input.GetKeyDown(KeyCode.UpArrow);
+        // Salto
+        bool jumpDown =
+            Input.GetButtonDown("Jump") ||
+            Input.GetKeyDown(KeyCode.Space) ||
+            Input.GetKeyDown(KeyCode.W) ||
+            Input.GetKeyDown(KeyCode.UpArrow);
 
-        jumpHeld = Input.GetButton("Jump") ||
-                   Input.GetKey(KeyCode.Space) ||
-                   Input.GetKey(KeyCode.W) ||
-                   Input.GetKey(KeyCode.UpArrow);
-
-        // Guardar el salto en el buffer unos milisegundos
-        if (jumpPressed)
+        if (jumpDown)
             jumpBufferCounter = jumpBufferTime;
         else
             jumpBufferCounter -= Time.deltaTime;
-    }
-
-    void FixedUpdate()
-    {
-        // --- Detectar suelo ---
-        enSueloPrevio = enSuelo;
-        if (groundCheck != null)
-            enSuelo = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundMask);
-        else
-            enSuelo = false;
-
-        // --- Contador de coyote time (gracia al caer) ---
-        if (enSuelo)
-            coyoteCounter = coyoteTime;
-        else
-            coyoteCounter -= Time.fixedDeltaTime;
-
-        // --- Movimiento horizontal ---
-        Vector2 v = rb.linearVelocity;
-        float targetVX = inputX * velocidadMax;
-        float accel = enSuelo ? aceleracionSuelo : aceleracionAire;
-        v.x = Mathf.MoveTowards(v.x, targetVX, accel * Time.fixedDeltaTime);
-        rb.linearDamping = enSuelo ? dragSuelo : dragAire;
-
-        // --- SALTO con buffer y coyote time ---
-        if (jumpBufferCounter > 0 && coyoteCounter > 0)
-        {
-            v.y = 0f;
-            rb.AddForce(Vector2.up * impulsoSalto, ForceMode2D.Impulse);
-            enSuelo = false;
-            jumpBufferCounter = 0f; // limpiar buffer tras salto
-        }
-
-        // --- SALTO VARIABLE (altura depende del tiempo que mantienes la tecla) ---
-        if (!enSuelo && !jumpHeld && rb.linearVelocity.y > 0)
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-        }
-
-        rb.linearVelocity = new Vector2(v.x, rb.linearVelocity.y);
-
-        // --- Voltear sprite según dirección y actualizar animator ---
-        float velocidadX = Input.GetAxis("Horizontal") * Time.deltaTime;
-        animator.SetFloat("movement", velocidadX * velocidadMax);
-        
-        if (inputX < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (inputX > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-
-        // --- Rebote pequeño al aterrizar ---
-        if (!enSueloPrevio && enSuelo)
-        {
-            float vyImpacto = Mathf.Abs(vyPrevio);
-            if (vyImpacto > umbralRebote)
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, vyImpacto * reboteSuave);
-            else
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("Wall"))
-        {
-            Vector2 n = col.contacts[0].normal;
-            rb.linearVelocity = Vector2.Reflect(rb.linearVelocity, n) * coefRestitucion;
-        }
     }
 
 #if UNITY_EDITOR
@@ -182,6 +359,9 @@ public class JugadorFisico : MonoBehaviour
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         }
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, radioColision);
     }
 #endif
 }
