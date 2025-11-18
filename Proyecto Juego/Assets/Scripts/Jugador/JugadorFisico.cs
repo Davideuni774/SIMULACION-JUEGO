@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 // Movimiento físico SIN Rigidbody2D ni Collider2D en el jugador.
 // Colisión con suelo, paredes y cajas usando Physics2D.
@@ -61,6 +62,9 @@ public class JugadorFisico : MonoBehaviour
 
     private float inputX;
 
+    // Animator params cache
+    private Dictionary<string, AnimatorControllerParameterType> animParams;
+
     void Start()
     {
         if (groundCheck != null)
@@ -69,6 +73,16 @@ public class JugadorFisico : MonoBehaviour
         float g = Mathf.Abs(gravedad);
         velSalto = Mathf.Sqrt(2f * g * Mathf.Max(alturaMaxSalto, 0.01f));
         velReboteMax = Mathf.Sqrt(2f * g * Mathf.Max(alturaMaxRebote, 0.01f));
+
+        if (animator != null)
+        {
+            animParams = new Dictionary<string, AnimatorControllerParameterType>();
+            foreach (var p in animator.parameters)
+            {
+                if (!animParams.ContainsKey(p.name))
+                    animParams.Add(p.name, p.type);
+            }
+        }
     }
 
     void Update()
@@ -252,14 +266,6 @@ public class JugadorFisico : MonoBehaviour
 
         if (!enSueloPrevio && enSuelo && vyAntesDeIntegrar < 0f)
         {
-            if (colSuelo != null)
-            {
-                pos = transform.position;
-                float sueloY = colSuelo.bounds.max.y;
-                pos.y = sueloY + offsetGroundY;
-                transform.position = pos;
-            }
-
             float vyImpacto = -vyAntesDeIntegrar;
             float vyRebote = Mathf.Min(vyImpacto * coefRestitucion, velReboteMax);
 
@@ -277,9 +283,14 @@ public class JugadorFisico : MonoBehaviour
         // -------- 7) ANIMACIÓN --------
         if (animator != null)
         {
-            animator.SetBool("Grounded", enSuelo);
-            animator.SetFloat("Speed", Mathf.Abs(velocidad.x));
-            animator.SetFloat("VelY", velocidad.y);
+            float speedXAbs = Mathf.Abs(velocidad.x);
+            float movement = Mathf.Clamp01(velocidadMax > 0f ? speedXAbs / velocidadMax : 0f);
+
+            TrySetBool("Grounded", enSuelo);
+            TrySetFloat("Speed", speedXAbs);
+            TrySetFloat("VelY", velocidad.y);
+            // Compatibilidad con parámetro esperado por el Animator
+            TrySetFloat("movement", movement);
         }
 
         if (inputX < -0.01f)
@@ -349,6 +360,25 @@ public class JugadorFisico : MonoBehaviour
             jumpBufferCounter = jumpBufferTime;
         else
             jumpBufferCounter -= Time.deltaTime;
+    }
+
+    // --- Utilidades Animator (evita warnings si el parámetro no existe) ---
+    void TrySetFloat(string name, float value)
+    {
+        if (animator == null) return;
+        if (animParams != null && animParams.TryGetValue(name, out var t) && t == AnimatorControllerParameterType.Float)
+        {
+            animator.SetFloat(name, value);
+        }
+    }
+
+    void TrySetBool(string name, bool value)
+    {
+        if (animator == null) return;
+        if (animParams != null && animParams.TryGetValue(name, out var t) && t == AnimatorControllerParameterType.Bool)
+        {
+            animator.SetBool(name, value);
+        }
     }
 
 #if UNITY_EDITOR

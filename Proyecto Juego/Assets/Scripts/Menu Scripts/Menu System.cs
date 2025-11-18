@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Botonjugare : MonoBehaviour
+public class MenuSystem : MonoBehaviour
 {
     public void Jugar()
     {
@@ -11,6 +11,16 @@ public class Botonjugare : MonoBehaviour
     public void Ajustes()
     {
         Debug.Log("Ajustes");
+    }
+    public void Salir()
+    {
+        Debug.Log("Saliendo del juego ...");
+        //Application.Quit();
+    }
+    public void Reintentar()
+    {
+        SceneManager.LoadScene("Nivel1");
+        Debug.Log("Regresando al menu principal ...");
     }
 
 }

@@ -53988,6 +53988,7 @@ GameObject:
   - component: {fileID: 886228322}
   - component: {fileID: 886228326}
   - component: {fileID: 886228327}
+  - component: {fileID: 886228328}
   m_Layer: 0
   m_Name: Esqueleton
   m_TagString: Untagged
@@ -54046,7 +54047,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -54057,7 +54058,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &886228324
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -54125,7 +54126,8 @@ Transform:
   m_LocalPosition: {x: -9.5, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1286111277}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &886228326
@@ -54157,30 +54159,76 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886228320}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0aeaf6ef470f5c499d667760655ff7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 886228326}
+  groundCheck: {fileID: 1286111277}
   masa: 1.2
-  gravedadRelativa: 1.2
+  gravedad: 9.81
   coefRestitucion: 0.6
   velocidadMax: 6
   aceleracionSuelo: 60
   aceleracionAire: 20
-  dragSuelo: 6
-  dragAire: 1
-  impulsoSalto: 8
-  reboteSuave: 0.3
-  umbralRebote: 3
-  groundCheck: {fileID: 0}
+  friccionSuelo: 8
+  friccionAire: 2
+  alturaMaxSalto: 2.5
+  alturaMaxRebote: 1.8
   groundRadius: 0.08
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
+  radioColision: 0.3
+  skin: 0.03
+  fuerzaEmpujeCajas: 20
   jumpBufferTime: 0.15
   coyoteTime: 0.1
+  limitarX: 1
+  xMin: -20
+  xMax: 20
+  limitarY: 1
+  yMin: -10
+  debugGround: 1
+--- !u!114 &886228328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886228320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421fb0b14e6cf1241990cd2492bbd69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 5
+  aceleracion: 20
+  desaceleracion: 30
+  fuerzaSalto: 20
+  tiempoCoyote: 0.1
+  bufferSalto: 0.1
+  permitirSaltoAire: 0
+  peso: 1
+  gravedadBase: 3
+  sueloLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  paredLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  letalesLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  puntoSuelo: {fileID: 828128003}
+  radioSuelo: 0.2
+  paramVelocidad: movement
+  paramEnSuelo: IsGrounded
+  paramVelocidadY: YVelocity
+  paramSaltarTrigger: Jump
+  anim: {fileID: 886228326}
+  girarSprite: 0
 --- !u!1 &1250884460
 GameObject:
   m_ObjectHideFlags: 0
@@ -54283,6 +54331,37 @@ Transform:
   m_Children:
   - {fileID: 1598017097}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1286111276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1286111277}
+  m_Layer: 0
+  m_Name: CroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1286111277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286111276}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6999998, y: -4.525, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 886228325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1551313605
 GameObject:
@@ -54448,7 +54527,7 @@ GameObject:
   - component: {fileID: 1598017097}
   - component: {fileID: 1598017099}
   - component: {fileID: 1598017098}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
