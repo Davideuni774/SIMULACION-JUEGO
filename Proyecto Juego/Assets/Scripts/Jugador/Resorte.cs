@@ -1,108 +1,147 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
-// Sistema masa-resorte con integración RK4 que interactúa con el jugador.
-// Adjunta este script a un GameObject con un Collider2D (isTrigger recomendado).
-[RequireComponent(typeof(Collider2D))]
 public class Resorte : MonoBehaviour
 {
-	// Parámetros físicos
-	public float m = 1.5f;          // masa
-	public float c = 1.5f;          // amortiguamiento
-	public float k = 6.0f;          // constante del resorte
-	public float x0 = 2.0f;         // posición inicial (desplazamiento desde equilibrio)
-	public float v0 = 0.0f;         // velocidad inicial
-	public float h = 0.02f;         // paso de integración (segundos)
-	public Vector3 eje = Vector3.up;// eje del movimiento (vertical por defecto)
+	[FormerlySerializedAs("stiffness")]
+	[SerializeField] private float rigidez = 50f;
+	[FormerlySerializedAs("damping")]
+	[SerializeField] private float amortiguamiento = 6f;
+	[FormerlySerializedAs("mass")]
+	[SerializeField] private float masa = 1f;
 
-	// Interacción con jugador
-	public string playerTag = "Player"; // Tag del jugador
-	public float compresionJugador = 1.0f; // Cuánto comprime el resorte al tocarlo
-	public float impulsoAlJugador = 8f;    // Impulso vertical aplicado al jugador al liberar
-	public float fuerzaExtraDecay = 4f;    // Velocidad con que desaparece la fuerza externa
+	[FormerlySerializedAs("useInitialYAsRest")]
+	[SerializeField] private bool usarYInicialComoReposo = true;
+	[FormerlySerializedAs("restY")]
+	[SerializeField] private float reposoY = -3.3f;
 
-	// Estado interno
-	private float x; // desplazamiento actual
-	private float v; // velocidad actual
-	private float t; // tiempo simulado
-	private Vector3 puntoEquilibrio; // posición base
-	private float fuerzaExterna; // fuerza acumulada por compresión del jugador
+	[FormerlySerializedAs("playerTag")]
+	[SerializeField] private string etiquetaJugador = "Player";
+	[FormerlySerializedAs("applyReactionToPlayer")]
+	[SerializeField] private bool aplicarReaccionAlJugador = true;
 
-	private Collider2D col;
+	[FormerlySerializedAs("clampDisplacement")]
+	[SerializeField] private bool limitarDesplazamiento = false;
+	[FormerlySerializedAs("maxCompression")]
+	[SerializeField] private float compresionMaxima = 2f;
+	[FormerlySerializedAs("maxExtension")]
+	[SerializeField] private float extensionMaxima = 1f;
 
-	void Start()
+	private float desplazamiento;
+	private float velocidad;
+	private Rigidbody2D rbJugador;
+
+	private void Start()
 	{
-		x = x0;
-		v = v0;
-		t = 0f;
-		puntoEquilibrio = transform.position;
-		col = GetComponent<Collider2D>();
-		col.isTrigger = true; // recomendación para interacción limpia
+		if (usarYInicialComoReposo)
+		{
+			reposoY = transform.position.y;
+		}
+		desplazamiento = transform.position.y - reposoY;
+		velocidad = 0f;
 	}
 
-	void FixedUpdate()
+	private void FixedUpdate()
 	{
-		// RK4 para el sistema masa-resorte amortiguado con fuerza externa F(t)
-		Vector2 k1 = Derivadas(t, x, v);
-		Vector2 k2 = Derivadas(t + h / 2f, x + h * k1.x / 2f, v + h * k1.y / 2f);
-		Vector2 k3 = Derivadas(t + h / 2f, x + h * k2.x / 2f, v + h * k2.y / 2f);
-		Vector2 k4 = Derivadas(t + h, x + h * k3.x, v + h * k3.y);
+		float dt = Time.fixedDeltaTime;
+		float g = Mathf.Abs(Physics2D.gravity.y);
 
-		x += (h / 6f) * (k1.x + 2f * k2.x + 2f * k3.x + k4.x);
-		v += (h / 6f) * (k1.y + 2f * k2.y + 2f * k3.y + k4.y);
-		t += h;
-
-		// Decaimiento suave de fuerza externa añadida por el jugador
-		if (fuerzaExterna > 0f)
+		float pesoJugador = 0f;
+		if (rbJugador != null)
 		{
-			fuerzaExterna = Mathf.Max(0f, fuerzaExterna - fuerzaExtraDecay * h);
+			pesoJugador = rbJugador.mass * g * rbJugador.gravityScale;
 		}
 
-		// Actualizar posición en el eje
-		transform.position = puntoEquilibrio + eje.normalized * x;
-	}
+		IntegrarRK4(dt, g, pesoJugador);
 
-	// Derivadas del sistema: dx/dt = v, dv/dt = (F(t) - c v - k x) / m
-	private Vector2 Derivadas(float tiempo, float xLocal, float vLocal)
-	{
-		float F = FuerzaExterna(tiempo);
-		float dxdt = vLocal;
-		float dvdt = (F - c * vLocal - k * xLocal) / m;
-		return new Vector2(dxdt, dvdt);
-	}
-
-	// Fuerza externa: proviene de compresión del jugador (acumulada)
-	private float FuerzaExterna(float tiempo)
-	{
-		return fuerzaExterna; // puedes extender con funciones periódicas si lo deseas
-	}
-
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.CompareTag(playerTag))
+		if (limitarDesplazamiento)
 		{
-			// Comprime el resorte (reduce x) y añade fuerza externa para empuje
-			x -= compresionJugador;
-			fuerzaExterna += k * compresionJugador; // proporcional a la compresión
+			float minX = -Mathf.Abs(compresionMaxima);
+			float maxX = Mathf.Abs(extensionMaxima);
+			desplazamiento = Mathf.Clamp(desplazamiento, minX, maxX);
+			if (velocidad > 0f && desplazamiento >= maxX) velocidad = 0f;
+			if (velocidad < 0f && desplazamiento <= minX) velocidad = 0f;
+		}
 
-			// Aplicar impulso al jugador (si tiene Rigidbody2D)
-			var rbPlayer = other.attachedRigidbody;
-			if (rbPlayer != null)
+		var pos = transform.position;
+		transform.position = new Vector3(pos.x, reposoY + desplazamiento, pos.z);
+
+		if (aplicarReaccionAlJugador && rbJugador != null)
+		{
+			float fuerzaResorteArriba = (-rigidez * desplazamiento - amortiguamiento * velocidad);
+			if (fuerzaResorteArriba > 0f)
 			{
-				// Limpia velocidad vertical negativa antes del impulso
-				var vP = rbPlayer.linearVelocity;
-				if (vP.y < 0f) vP.y = 0f;
-				rbPlayer.linearVelocity = vP;
-				rbPlayer.AddForce(Vector2.up * impulsoAlJugador, ForceMode2D.Impulse);
+				rbJugador.AddForce(Vector2.up * fuerzaResorteArriba, ForceMode2D.Force);
 			}
 		}
 	}
 
-	void OnDrawGizmos()
+	private void IntegrarRK4(float dt, float g, float pesoJugador)
 	{
-		Gizmos.color = Color.yellow;
-		Vector3 eq = Application.isPlaying ? puntoEquilibrio : transform.position;
-		Gizmos.DrawWireSphere(eq, 0.05f);
-		Gizmos.color = Color.cyan;
-		Gizmos.DrawLine(eq, eq + eje.normalized * x);
+		if (masa <= 0f) return;
+
+		float ax1 = Aceleracion(desplazamiento, velocidad, g, pesoJugador);
+		float k1x = velocidad;
+		float k1v = ax1;
+
+		float x2 = desplazamiento + 0.5f * dt * k1x;
+		float v2 = velocidad + 0.5f * dt * k1v;
+		float k2x = v2;
+		float k2v = Aceleracion(x2, v2, g, pesoJugador);
+
+		float x3 = desplazamiento + 0.5f * dt * k2x;
+		float v3 = velocidad + 0.5f * dt * k2v;
+		float k3x = v3;
+		float k3v = Aceleracion(x3, v3, g, pesoJugador);
+
+		float x4 = desplazamiento + dt * k3x;
+		float v4 = velocidad + dt * k3v;
+		float k4x = v4;
+		float k4v = Aceleracion(x4, v4, g, pesoJugador);
+
+		desplazamiento += (dt / 6f) * (k1x + 2f * k2x + 2f * k3x + k4x);
+		velocidad += (dt / 6f) * (k1v + 2f * k2v + 2f * k3v + k4v);
+	}
+
+	private float Aceleracion(float xVal, float vVal, float g, float pesoJugador)
+	{
+		float fuerzaResorte = -rigidez * xVal;
+		float fuerzaAmortiguamiento = -amortiguamiento * vVal;
+		float fuerzaGravedad = -masa * g;
+		float fuerzaExterna = -pesoJugador;
+		return (fuerzaResorte + fuerzaAmortiguamiento + fuerzaGravedad + fuerzaExterna) / masa;
+	}
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag(etiquetaJugador))
+		{
+			other.TryGetComponent<Rigidbody2D>(out rbJugador);
+		}
+	}
+
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.CompareTag(etiquetaJugador))
+		{
+			if (other.attachedRigidbody == rbJugador) rbJugador = null;
+		}
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.collider.CompareTag(etiquetaJugador))
+		{
+			collision.collider.TryGetComponent<Rigidbody2D>(out rbJugador);
+		}
+	}
+
+	private void OnCollisionExit2D(Collision2D collision)
+	{
+		if (collision.collider.CompareTag(etiquetaJugador))
+		{
+			if (collision.rigidbody == rbJugador) rbJugador = null;
+		}
 	}
 }
+
