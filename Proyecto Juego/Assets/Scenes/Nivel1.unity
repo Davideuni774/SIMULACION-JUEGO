@@ -55503,7 +55503,7 @@ MonoBehaviour:
   fuerzaEmpujeCajas: 20
   jumpBufferTime: 0.15
   coyoteTime: 0.1
-  limitarX: 1
+  limitarX: 0
   xMin: -20
   xMax: 20
   limitarY: 1

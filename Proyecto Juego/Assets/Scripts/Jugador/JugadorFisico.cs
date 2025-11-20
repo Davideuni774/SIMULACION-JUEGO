@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;  
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 // Movimiento físico 
@@ -19,13 +19,17 @@ public class JugadorFisico : MonoBehaviour
     [Header("Movimiento horizontal")]
     public float velocidadMax = 10f;
     public float aceleracionSuelo = 60f;
-    public float aceleracionAire = 20f;
+    public float aceleracionAire = 20f; // ya no se usa para input en el aire
     public float friccionSuelo = 8f;
     public float friccionAire = 2f;
 
     [Header("Salto / Rebote")]
     public float alturaMaxSalto = 2.5f;
     public float alturaMaxRebote = 1.8f;
+
+    [Header("Caída con resistencia")]
+    [Tooltip("Coeficiente de resistencia del aire (c). Solo se aplica al bajar.")]
+    public float coefResistenciaAire = 5f;
 
     [Header("Ground check (plataformas, suelo, cajas)")]
     public float groundRadius = 0.15f;
@@ -122,13 +126,23 @@ public class JugadorFisico : MonoBehaviour
             coyoteCounter -= dt;
 
         // -------- 2) MOVIMIENTO HORIZONTAL --------
-        float objetivoVX = inputX * velocidadMax;
-        float accel = sueloAhora ? aceleracionSuelo : aceleracionAire;
-        velocidad.x = Mathf.MoveTowards(velocidad.x, objetivoVX, accel * dt);
-
-        if (Mathf.Approximately(inputX, 0f))
+        // SOLO se controla en el suelo. En el aire no hay input.
+        if (sueloAhora)
         {
-            float fric = sueloAhora ? friccionSuelo : friccionAire;
+            float objetivoVX = inputX * velocidadMax;
+            float accel = aceleracionSuelo;
+            velocidad.x = Mathf.MoveTowards(velocidad.x, objetivoVX, accel * dt);
+
+            if (Mathf.Approximately(inputX, 0f))
+            {
+                float fric = friccionSuelo;
+                velocidad.x = Mathf.MoveTowards(velocidad.x, 0f, fric * dt);
+            }
+        }
+        else
+        {
+            // En el aire, se va frenando por fricción, pero sin responder a input
+            float fric = friccionAire;
             velocidad.x = Mathf.MoveTowards(velocidad.x, 0f, fric * dt);
         }
 
@@ -142,11 +156,33 @@ public class JugadorFisico : MonoBehaviour
         }
 
         // -------- 4) ACELERACIÓN VERTICAL --------
-        float aY = -gravedad;
+        float aY = 0f;
+
         if (sueloAhora && velocidad.y <= 0f)
         {
+            // Apoyado en el suelo
             aY = 0f;
             velocidad.y = 0f;
+        }
+        else
+        {
+            // En el aire:
+            // - Si va subiendo (velocidad.y > 0) -> solo gravedad (salto con caída libre)
+            // - Si va bajando (velocidad.y <= 0) -> gravedad + resistencia del aire
+            float c = Mathf.Max(coefResistenciaAire, 0f);
+            float m = Mathf.Max(masa, 0.01f);
+
+            if (velocidad.y > 0f)
+            {
+                // Fase de subida: caída libre
+                aY = -gravedad;
+            }
+            else
+            {
+                // Fase de bajada: resistencia aire (termino - (c/m)*v )
+                // dv/dt = -g - (c/m)*v
+                aY = -gravedad - (c / m) * velocidad.y;
+            }
         }
 
         vyAntesDeIntegrar = velocidad.y;
@@ -200,9 +236,6 @@ public class JugadorFisico : MonoBehaviour
             {
                 Vector2 n = hitY.normal;
 
-                // Solo consideramos "suelo" o "techo" verdaderos:
-                // - si caemos (dirY.y < 0) queremos normales con componente Y positiva (suelo)
-                // - si subimos (dirY.y > 0) queremos normales con componente Y negativa (techo)
                 bool esSueloValido = dirY.y < 0f && n.y > 0.5f;
                 bool esTechoValido = dirY.y > 0f && n.y < -0.5f;
                 bool resolverY = esSueloValido || esTechoValido;
@@ -215,7 +248,7 @@ public class JugadorFisico : MonoBehaviour
                 }
                 else
                 {
-                    // Si la normal es casi horizontal (pared/esquina), dejamos que pase en Y
+                    // Normal casi horizontal (pared/esquina) -> dejamos pasar en Y
                     pos.y += movY;
                 }
             }
@@ -232,9 +265,8 @@ public class JugadorFisico : MonoBehaviour
         // -------- LÍMITE Y + ESCENA LOSE --------
         if (limitarY && pos.y < yMin)
         {
-            // Cargar escena de derrota
             SceneManager.LoadScene(loseSceneName);
-            return; // salimos de FixedUpdate
+            return;
         }
 
         // Límite X global opcional
@@ -292,16 +324,16 @@ public class JugadorFisico : MonoBehaviour
             TrySetBool("Grounded", enSuelo);
             TrySetFloat("Speed", speedXAbs);
             TrySetFloat("VelY", velocidad.y);
-            // Compatibilidad con parámetro esperado por el Animator
             TrySetFloat("movement", movement);
         }
 
+        // Flip del sprite (solo según input, aunque en el aire no se mueva)
         if (inputX < -0.01f)
             transform.localScale = new Vector3(-1f, 1f, 1f);
         else if (inputX > 0.01f)
             transform.localScale = new Vector3(1f, 1f, 1f);
 
-        // -------- 8) CORREGIR PENETRACIONES (por si quedó dentro de algo) --------
+        // -------- 8) CORREGIR PENETRACIONES --------
         ResolverPenetraciones();
     }
 
