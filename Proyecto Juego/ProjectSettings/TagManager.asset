@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - Plataforma
   - Caja
+  - Enemy
+  - Enemigo
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - Cajas
   - LP
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
