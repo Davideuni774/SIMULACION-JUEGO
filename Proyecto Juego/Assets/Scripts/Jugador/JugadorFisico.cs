@@ -65,6 +65,9 @@ public class JugadorFisico : MonoBehaviour
     private float velSalto;
     private float velReboteMax;
     private float offsetGroundY;
+    
+    // --- Fuerzas externas (para sistemas como resortes) ---
+    private Vector2 fuerzasExternas = Vector2.zero;
 
     private bool enSuelo;
     private bool enSueloPrevio;
@@ -150,13 +153,22 @@ public class JugadorFisico : MonoBehaviour
                 float fric = friccionSuelo;
                 velocidad.x = Mathf.MoveTowards(velocidad.x, 0f, fric * dt);
             }
+            
+            // Aplicar fuerzas externas horizontales también en el suelo
+            velocidad.x += (fuerzasExternas.x / masa) * dt;
         }
         else
         {
             // En el aire, se va frenando por fricción, pero sin responder a input
             float fric = friccionAire;
             velocidad.x = Mathf.MoveTowards(velocidad.x, 0f, fric * dt);
+            
+            // Aplicar fuerzas externas horizontales en el aire
+            velocidad.x += (fuerzasExternas.x / masa) * dt;
         }
+        
+        // Resetear fuerzas externas (se acumulan por frame)
+        fuerzasExternas = Vector2.zero;
 
         // -------- 3) SALTO --------
         if (jumpBufferCounter > 0f && coyoteCounter > 0f)
@@ -195,6 +207,9 @@ public class JugadorFisico : MonoBehaviour
                 // dv/dt = -g - (c/m)*v
                 aY = -gravedad - (c / m) * velocidad.y;
             }
+            
+            // Agregar fuerzas externas (como resortes) solo en el aire o cuando están en el suelo
+            aY += fuerzasExternas.y / masa;
         }
 
         vyAntesDeIntegrar = velocidad.y;

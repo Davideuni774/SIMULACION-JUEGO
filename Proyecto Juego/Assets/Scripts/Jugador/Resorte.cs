@@ -1,147 +1,79 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Resorte : MonoBehaviour
 {
-	[FormerlySerializedAs("stiffness")]
-	[SerializeField] private float rigidez = 50f;
-	[FormerlySerializedAs("damping")]
-	[SerializeField] private float amortiguamiento = 6f;
-	[FormerlySerializedAs("mass")]
-	[SerializeField] private float masa = 1f;
+	[SerializeField] float mass = 1f;
+	[SerializeField] float springConstant = 20f;
+	[SerializeField] float damping = 1f;
+	[SerializeField] float initialAmplitude = 1f;
+	[SerializeField] float initialVelocity = 0f;
+	[SerializeField] Vector3 axis = Vector3.up;
+	[SerializeField] float positionThreshold = 0.01f;
+	[SerializeField] float velocityThreshold = 0.01f;
+	[SerializeField] float settleDuration = 1f;
 
-	[FormerlySerializedAs("useInitialYAsRest")]
-	[SerializeField] private bool usarYInicialComoReposo = true;
-	[FormerlySerializedAs("restY")]
-	[SerializeField] private float reposoY = -3.3f;
+	Vector3 basePosition;
+	float x;
+	float v;
+	float settleTimer;
 
-	[FormerlySerializedAs("playerTag")]
-	[SerializeField] private string etiquetaJugador = "Player";
-	[FormerlySerializedAs("applyReactionToPlayer")]
-	[SerializeField] private bool aplicarReaccionAlJugador = true;
-
-	[FormerlySerializedAs("clampDisplacement")]
-	[SerializeField] private bool limitarDesplazamiento = false;
-	[FormerlySerializedAs("maxCompression")]
-	[SerializeField] private float compresionMaxima = 2f;
-	[FormerlySerializedAs("maxExtension")]
-	[SerializeField] private float extensionMaxima = 1f;
-
-	private float desplazamiento;
-	private float velocidad;
-	private Rigidbody2D rbJugador;
-
-	private void Start()
+	void Awake()
 	{
-		if (usarYInicialComoReposo)
-		{
-			reposoY = transform.position.y;
-		}
-		desplazamiento = transform.position.y - reposoY;
-		velocidad = 0f;
+		basePosition = transform.localPosition;
+		ResetSpring();
 	}
 
-	private void FixedUpdate()
+	void FixedUpdate()
 	{
 		float dt = Time.fixedDeltaTime;
-		float g = Mathf.Abs(Physics2D.gravity.y);
-
-		float pesoJugador = 0f;
-		if (rbJugador != null)
+		IntegrateRK4(dt);
+		transform.localPosition = basePosition + axis.normalized * x;
+		if (Mathf.Abs(x) < positionThreshold && Mathf.Abs(v) < velocityThreshold)
 		{
-			pesoJugador = rbJugador.mass * g * rbJugador.gravityScale;
+			settleTimer += dt;
+			if (settleTimer >= settleDuration) ResetSpring();
 		}
-
-		IntegrarRK4(dt, g, pesoJugador);
-
-		if (limitarDesplazamiento)
+		else
 		{
-			float minX = -Mathf.Abs(compresionMaxima);
-			float maxX = Mathf.Abs(extensionMaxima);
-			desplazamiento = Mathf.Clamp(desplazamiento, minX, maxX);
-			if (velocidad > 0f && desplazamiento >= maxX) velocidad = 0f;
-			if (velocidad < 0f && desplazamiento <= minX) velocidad = 0f;
-		}
-
-		var pos = transform.position;
-		transform.position = new Vector3(pos.x, reposoY + desplazamiento, pos.z);
-
-		if (aplicarReaccionAlJugador && rbJugador != null)
-		{
-			float fuerzaResorteArriba = (-rigidez * desplazamiento - amortiguamiento * velocidad);
-			if (fuerzaResorteArriba > 0f)
-			{
-				rbJugador.AddForce(Vector2.up * fuerzaResorteArriba, ForceMode2D.Force);
-			}
+			settleTimer = 0f;
 		}
 	}
 
-	private void IntegrarRK4(float dt, float g, float pesoJugador)
+	void IntegrateRK4(float dt)
 	{
-		if (masa <= 0f) return;
+		float a1 = Acceleration(x, v);
+		float k1x = v * dt;
+		float k1v = a1 * dt;
 
-		float ax1 = Aceleracion(desplazamiento, velocidad, g, pesoJugador);
-		float k1x = velocidad;
-		float k1v = ax1;
+		float a2 = Acceleration(x + k1x * 0.5f, v + k1v * 0.5f);
+		float k2x = (v + k1v * 0.5f) * dt;
+		float k2v = a2 * dt;
 
-		float x2 = desplazamiento + 0.5f * dt * k1x;
-		float v2 = velocidad + 0.5f * dt * k1v;
-		float k2x = v2;
-		float k2v = Aceleracion(x2, v2, g, pesoJugador);
+		float a3 = Acceleration(x + k2x * 0.5f, v + k2v * 0.5f);
+		float k3x = (v + k2v * 0.5f) * dt;
+		float k3v = a3 * dt;
 
-		float x3 = desplazamiento + 0.5f * dt * k2x;
-		float v3 = velocidad + 0.5f * dt * k2v;
-		float k3x = v3;
-		float k3v = Aceleracion(x3, v3, g, pesoJugador);
+		float a4 = Acceleration(x + k3x, v + k3v);
+		float k4x = (v + k3v) * dt;
+		float k4v = a4 * dt;
 
-		float x4 = desplazamiento + dt * k3x;
-		float v4 = velocidad + dt * k3v;
-		float k4x = v4;
-		float k4v = Aceleracion(x4, v4, g, pesoJugador);
-
-		desplazamiento += (dt / 6f) * (k1x + 2f * k2x + 2f * k3x + k4x);
-		velocidad += (dt / 6f) * (k1v + 2f * k2v + 2f * k3v + k4v);
+		x += (k1x + 2f * k2x + 2f * k3x + k4x) / 6f;
+		v += (k1v + 2f * k2v + 2f * k3v + k4v) / 6f;
 	}
 
-	private float Aceleracion(float xVal, float vVal, float g, float pesoJugador)
+	float Acceleration(float px, float pv)
 	{
-		float fuerzaResorte = -rigidez * xVal;
-		float fuerzaAmortiguamiento = -amortiguamiento * vVal;
-		float fuerzaGravedad = -masa * g;
-		float fuerzaExterna = -pesoJugador;
-		return (fuerzaResorte + fuerzaAmortiguamiento + fuerzaGravedad + fuerzaExterna) / masa;
+		return -(springConstant / mass) * px - (damping / mass) * pv;
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
+	public void ResetSpring()
 	{
-		if (other.CompareTag(etiquetaJugador))
-		{
-			other.TryGetComponent<Rigidbody2D>(out rbJugador);
-		}
+		x = initialAmplitude;
+		v = initialVelocity;
+		settleTimer = 0f;
 	}
 
-	private void OnTriggerExit2D(Collider2D other)
-	{
-		if (other.CompareTag(etiquetaJugador))
-		{
-			if (other.attachedRigidbody == rbJugador) rbJugador = null;
-		}
-	}
-
-	private void OnCollisionEnter2D(Collision2D collision)
-	{
-		if (collision.collider.CompareTag(etiquetaJugador))
-		{
-			collision.collider.TryGetComponent<Rigidbody2D>(out rbJugador);
-		}
-	}
-
-	private void OnCollisionExit2D(Collision2D collision)
-	{
-		if (collision.collider.CompareTag(etiquetaJugador))
-		{
-			if (collision.rigidbody == rbJugador) rbJugador = null;
-		}
-	}
+	public float Displacement => x;
+	public float Velocity => v;
+	public bool IsSettled => settleTimer >= settleDuration;
 }
-

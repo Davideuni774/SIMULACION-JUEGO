@@ -455,16 +455,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6667311cde30d4b81a4f20edc78713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidez: 25
-  amortiguamiento: 2
-  masa: 1
-  usarYInicialComoReposo: 1
-  reposoY: -3.3
-  etiquetaJugador: Player
-  aplicarReaccionAlJugador: 1
-  limitarDesplazamiento: 0
-  compresionMaxima: 2
-  extensionMaxima: 1
+  mass: 1
+  springConstant: 20
+  damping: 1
+  initialAmplitude: 1
+  initialVelocity: 0
+  axis: {x: 0, y: 1, z: 0}
+  positionThreshold: 0.01
+  velocityThreshold: 0.01
+  settleDuration: 1
 --- !u!61 &245828810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -825,16 +824,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6667311cde30d4b81a4f20edc78713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidez: 25
-  amortiguamiento: 2
-  masa: 1
-  usarYInicialComoReposo: 1
-  reposoY: -3.3
-  etiquetaJugador: Player
-  aplicarReaccionAlJugador: 1
-  limitarDesplazamiento: 0
-  compresionMaxima: 2
-  extensionMaxima: 1
+  mass: 1
+  springConstant: 20
+  damping: 1
+  initialAmplitude: 1
+  initialVelocity: 0
+  axis: {x: 0, y: 1, z: 0}
+  positionThreshold: 0.01
+  velocityThreshold: 0.01
+  settleDuration: 1
 --- !u!61 &611179538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1013,16 +1011,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6667311cde30d4b81a4f20edc78713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidez: 25
-  amortiguamiento: 2
-  masa: 1
-  usarYInicialComoReposo: 1
-  reposoY: -3.3
-  etiquetaJugador: Player
-  aplicarReaccionAlJugador: 1
-  limitarDesplazamiento: 0
-  compresionMaxima: 2
-  extensionMaxima: 1
+  mass: 1
+  springConstant: 20
+  damping: 1
+  initialAmplitude: 1
+  initialVelocity: 0
+  axis: {x: 0, y: 1, z: 0}
+  positionThreshold: 0.01
+  velocityThreshold: 0.01
+  settleDuration: 1
 --- !u!61 &780328165
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55441,7 +55438,7 @@ Transform:
   m_GameObject: {fileID: 886228320}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.5, y: -3.3, z: 0}
+  m_LocalPosition: {x: -9.5, y: -0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -55633,16 +55630,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6667311cde30d4b81a4f20edc78713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidez: 25
-  amortiguamiento: 2
-  masa: 1
-  usarYInicialComoReposo: 1
-  reposoY: -3.3
-  etiquetaJugador: Player
-  aplicarReaccionAlJugador: 1
-  limitarDesplazamiento: 0
-  compresionMaxima: 2
-  extensionMaxima: 1
+  mass: 1
+  springConstant: 20
+  damping: 1
+  initialAmplitude: 1
+  initialVelocity: 0
+  axis: {x: 0, y: 1, z: 0}
+  positionThreshold: 0.01
+  velocityThreshold: 0.01
+  settleDuration: 1
 --- !u!61 &1225257927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55735,16 +55731,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6667311cde30d4b81a4f20edc78713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidez: 25
-  amortiguamiento: 2
-  masa: 1
-  usarYInicialComoReposo: 1
-  reposoY: -3.3
-  etiquetaJugador: Player
-  aplicarReaccionAlJugador: 1
-  limitarDesplazamiento: 0
-  compresionMaxima: 2
-  extensionMaxima: 1
+  mass: 1
+  springConstant: 20
+  damping: 1
+  initialAmplitude: 1
+  initialVelocity: 0
+  axis: {x: 0, y: 1, z: 0}
+  positionThreshold: 0.01
+  velocityThreshold: 0.01
+  settleDuration: 1
 --- !u!61 &1250884463
 BoxCollider2D:
   m_ObjectHideFlags: 0
