@@ -19,12 +19,12 @@ public class JugadorFisico : MonoBehaviour
     [Header("Movimiento horizontal")]
     public float velocidadMax = 10f;
     public float aceleracionSuelo = 60f;
-    public float aceleracionAire = 20f; // ya no se usa para input en el aire
+    public float aceleracionAire = 20f; 
     public float friccionSuelo = 8f;
     public float friccionAire = 2f;
 
     [Header("Enemigos / Golpe")]
-    public LayerMask enemyMask;          // capa de enemigos (se sigue usando en los casts)
+    public LayerMask enemyMask;          // capa de enemigos 
     public float knockbackHorizontal = 6f;
     public float knockbackVertical = 5f;
     public float tiempoInvulnerable = 0.5f;
@@ -55,12 +55,12 @@ public class JugadorFisico : MonoBehaviour
     public float xMin = -20f, xMax = 20f;
     public bool limitarY = true;
     public float yMin = -3f;
-    public string loseSceneName = "Lose";   // <-- nombre de la escena de derrota
+    public string loseSceneName = "Lose";  
 
     [Header("Debug")]
     public bool debugGround = true;
 
-    // --- Estado interno ---
+    // Estado interno
     private Vector2 velocidad;
     private float velSalto;
     private float velReboteMax;
@@ -112,7 +112,7 @@ public class JugadorFisico : MonoBehaviour
         if (invulnCounter > 0f)
             invulnCounter -= dt;
 
-        // -------- 1) DETECCIÓN DE SUELO (ANTES DE MOVER) --------
+        //1) DETECCIÓN DE SUELO
         Collider2D colSuelo = null;
         bool sueloAhora = false;
 
@@ -137,8 +137,8 @@ public class JugadorFisico : MonoBehaviour
         else
             coyoteCounter -= dt;
 
-        // -------- 2) MOVIMIENTO HORIZONTAL --------
-        // SOLO se controla en el suelo. En el aire no hay input.
+        // 2) MOVIMIENTO HORIZONTAL 
+        // SOLO se controla en el suelo. En el aire no
         if (sueloAhora)
         {
             float objetivoVX = inputX * velocidadMax;
@@ -153,12 +153,12 @@ public class JugadorFisico : MonoBehaviour
         }
         else
         {
-            // En el aire, se va frenando por fricción, pero sin responder a input
+            // En el aire, se va frenando por fricción
             float fric = friccionAire;
             velocidad.x = Mathf.MoveTowards(velocidad.x, 0f, fric * dt);
         }
 
-        // -------- 3) SALTO --------
+        // 3) SALTO
         if (jumpBufferCounter > 0f && coyoteCounter > 0f)
         {
             velocidad.y = velSalto;
@@ -167,7 +167,7 @@ public class JugadorFisico : MonoBehaviour
             jumpBufferCounter = 0f;
         }
 
-        // -------- 4) ACELERACIÓN VERTICAL --------
+        // 4) ACELERACIÓN VERTICAL
         float aY = 0f;
 
         if (sueloAhora && velocidad.y <= 0f)
@@ -200,10 +200,10 @@ public class JugadorFisico : MonoBehaviour
         vyAntesDeIntegrar = velocidad.y;
         velocidad.y += aY * dt;
 
-        // -------- 5) INTEGRACIÓN CON COLISIÓN EN X/Y --------
+        // 5) INTEGRACIÓN CON COLISIÓN EN X/Y 
         Vector2 pos = transform.position;
 
-        // --- X: paredes / cajas / enemigos ---
+        // X: paredes / cajas / enemigos 
         float movX = velocidad.x * dt;
         if (Mathf.Abs(movX) > 0.0001f)
         {
@@ -218,7 +218,7 @@ public class JugadorFisico : MonoBehaviour
             {
                 if (hitX.collider.CompareTag("Enemigo"))
                 {
-                    // choque lateral con enemigo → solo knockback
+                    // choque lateral con enemigo
                     RecibirDanio(hitX.normal);
                 }
                 else
@@ -242,7 +242,7 @@ public class JugadorFisico : MonoBehaviour
             }
         }
 
-        // --- Y: caída / salto (colisión vertical + enemigos) ---
+        // Y: caída / salto (colisión vertical + enemigos) 
         float movY = velocidad.y * dt;
 
         if (Mathf.Abs(movY) > 0.0001f)
@@ -254,7 +254,7 @@ public class JugadorFisico : MonoBehaviour
 
             if (hitY.collider != null)
             {
-                // ¿Es enemigo?
+                // Es enemigo???
                 if (hitY.collider.CompareTag("Enemigo"))
                 {
                     Enemy enemy = hitY.collider.GetComponent<Enemy>();
@@ -276,13 +276,13 @@ public class JugadorFisico : MonoBehaviour
                     }
                     else
                     {
-                        // No fue stomp → solo knockback
+                        // No fue stomp
                         RecibirDanio(hitY.normal);
                     }
                 }
                 else
                 {
-                    // ====== Comportamiento normal con suelo/techo ======
+                    //Comportamiento normal con suelo/techo
                     Vector2 n = hitY.normal;
 
                     bool esSueloValido = dirY.y < 0f && n.y > 0.5f;
@@ -312,7 +312,7 @@ public class JugadorFisico : MonoBehaviour
             pos.y += movY;
         }
 
-        // -------- LÍMITE Y + ESCENA LOSE --------
+        //LÍMITE Y + ESCENA LOSE 
         if (limitarY && pos.y < yMin)
         {
             SceneManager.LoadScene(loseSceneName);
@@ -336,10 +336,9 @@ public class JugadorFisico : MonoBehaviour
 
         transform.position = pos;
 
-        // 🔴 Chequeo extra: enemigo pegado aunque el jugador esté quieto
         ChequearSolapamientoEnemigos(pos);
 
-        // -------- 6) CHEQUEO DE ATERRIZAJE + REBOTE --------
+        //6) CHEQUEO DE ATERRIZAJE + REBOTE 
         enSueloPrevio = enSuelo;
 
         if (groundCheck != null)
@@ -368,7 +367,7 @@ public class JugadorFisico : MonoBehaviour
             }
         }
 
-        // -------- 7) ANIMACIÓN --------
+        // 7) ANIMACIÓN
         if (animator != null)
         {
             float speedXAbs = Mathf.Abs(velocidad.x);
@@ -386,17 +385,12 @@ public class JugadorFisico : MonoBehaviour
         else if (inputX > 0.01f)
             transform.localScale = new Vector3(1f, 1f, 1f);
 
-        // -------- 8) CORREGIR PENETRACIONES --------
         ResolverPenetraciones();
     }
-
-    // 🔴 NUEVO: detectar enemigos que estén ya pegados al jugador aunque no se mueva
     void ChequearSolapamientoEnemigos(Vector2 pos)
     {
         if (invulnCounter > 0f) return;
 
-        // Miramos TODAS las capas y filtramos por tag,
-        // y ampliamos un pelín el radio para ser más generosos
         float radio = radioColision * 1.2f;
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(pos, radio);
@@ -410,7 +404,7 @@ public class JugadorFisico : MonoBehaviour
 
             normal.Normalize();
             RecibirDanio(normal);
-            break; // con uno basta
+            break; 
         }
     }
 
@@ -474,14 +468,14 @@ public class JugadorFisico : MonoBehaviour
             jumpBufferCounter -= Time.deltaTime;
     }
 
-    // --- Golpe / knockback ---
+    // Golpe 
     void RecibirDanio(Vector2 normalGolpe)
     {
         if (invulnCounter > 0f) return;
 
         // Rebote tipo "curva": velocidad hacia atrás y hacia arriba
         Vector2 knockDir = normalGolpe;
-        if (knockDir.y <= 0f) knockDir.y = 0.5f; // aseguramos algo de impulso hacia arriba
+        if (knockDir.y <= 0f) knockDir.y = 0.5f; // impulso hacia arriba
         knockDir.Normalize();
 
         velocidad.x = knockDir.x * knockbackHorizontal;
@@ -489,8 +483,6 @@ public class JugadorFisico : MonoBehaviour
 
         invulnCounter = tiempoInvulnerable;
     }
-
-    // --- Utilidades Animator (evita warnings si el parámetro no existe) ---
     void TrySetFloat(string name, float value)
     {
         if (animator == null) return;
