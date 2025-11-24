@@ -459,23 +459,34 @@ public class JugadorFisico : MonoBehaviour
 
     void LeerInput()
     {
-        // Horizontal
+        // Horizontal (teclado + mando Xbox 360)
         float axisX = 0f;
         try { axisX = Input.GetAxisRaw("Horizontal"); } catch { axisX = 0f; }
 
+        // Teclado manual si no hay input del eje
         if (Mathf.Approximately(axisX, 0f))
         {
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) axisX -= 1f;
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) axisX += 1f;
         }
+        
+        // Stick izquierdo del mando Xbox 360 (eje horizontal adicional)
+        float joyAxisX = 0f;
+        try { joyAxisX = Input.GetAxisRaw("Joy X"); } catch { }
+        
+        // Combinar inputs (prioridad al que tenga mayor valor absoluto)
+        if (Mathf.Abs(joyAxisX) > Mathf.Abs(axisX))
+            axisX = joyAxisX;
+        
         inputX = Mathf.Clamp(axisX, -1f, 1f);
 
-        // Salto
+        // Salto (teclado + botón A del mando Xbox 360)
         bool jumpDown =
             Input.GetButtonDown("Jump") ||
             Input.GetKeyDown(KeyCode.Space) ||
             Input.GetKeyDown(KeyCode.W) ||
-            Input.GetKeyDown(KeyCode.UpArrow);
+            Input.GetKeyDown(KeyCode.UpArrow) ||
+            Input.GetKeyDown(KeyCode.Joystick1Button0); // Botón A (Xbox 360)
 
         if (jumpDown)
             jumpBufferCounter = jumpBufferTime;

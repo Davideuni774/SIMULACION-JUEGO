@@ -7,7 +7,10 @@ public class Enemy : MonoBehaviour
     public EjeMovimiento eje = EjeMovimiento.Horizontal;
 
     public float velocidad = 2f;
-    public float distancia = 3f;  // cuánto se aleja del punto inicial
+    public float distancia = 3f;  // cuï¿½nto se aleja del punto inicial
+
+    // Asignar desde el inspector. Debe tener un parÃ¡metro float llamado "enemov"
+    public Animator animator;
 
     private Vector3 startPos;
     private int dir = 1;
@@ -35,11 +38,22 @@ public class Enemy : MonoBehaviour
         }
 
         transform.position = pos;
+
+        // Voltea el sprite segÃºn la direcciÃ³n del movimiento
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * dir;
+        transform.localScale = scale;
+
+        // Actualiza el parÃ¡metro de movimiento para animaciones (direcciÃ³n * velocidad)
+        if (animator != null)
+        {
+            animator.SetFloat("enemov", velocidad * dir);
+        }
     }
 
     public void Morir()
     {
-        // aquí puedes poner animación/muerte antes de Destroy
+        // aquï¿½ puedes poner animaciï¿½n/muerte antes de Destroy
         Destroy(gameObject);
     }
 }
