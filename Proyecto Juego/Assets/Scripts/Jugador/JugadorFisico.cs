@@ -10,6 +10,12 @@ public class JugadorFisico : MonoBehaviour
     [Header("Referencias")]
     public Animator animator;
     public Transform groundCheck;
+    public AudioSource audioSource;
+    
+    [Header("Sonidos")]
+    public AudioClip sonidoMovimiento;
+    [Tooltip("Velocidad mínima para reproducir el sonido de movimiento")]
+    public float velocidadMinimaParaSonido = 0.5f;
 
     [Header("Física básica")]
     public float masa = 1.2f;
@@ -55,7 +61,12 @@ public class JugadorFisico : MonoBehaviour
     public float xMin = -20f, xMax = 20f;
     public bool limitarY = true;
     public float yMin = -3f;
-    public string loseSceneName = "Lose";  
+    public string loseSceneName = "Lose";
+    
+    [Header("Paso de nivel")]
+    public bool activarPasoNivel = true;
+    public float xLimiteNivel2 = 471f;
+    public string nivel2SceneName = "Nivel2";  
 
     [Header("Debug")]
     public bool debugGround = true;
@@ -334,6 +345,13 @@ public class JugadorFisico : MonoBehaviour
             return;
         }
 
+        // Paso al Nivel 2 cuando sobrepasa el límite en X
+        if (activarPasoNivel && pos.x >= xLimiteNivel2)
+        {
+            SceneManager.LoadScene(nivel2SceneName);
+            return;
+        }
+
         // Límite X global opcional
         if (limitarX)
         {
@@ -399,6 +417,9 @@ public class JugadorFisico : MonoBehaviour
             transform.localScale = new Vector3(-1f, 1f, 1f);
         else if (inputX > 0.01f)
             transform.localScale = new Vector3(1f, 1f, 1f);
+
+        // Sistema de sonido de movimiento
+        ReproducirSonidoMovimiento();
 
         ResolverPenetraciones();
     }
@@ -509,6 +530,34 @@ public class JugadorFisico : MonoBehaviour
 
         invulnCounter = tiempoInvulnerable;
     }
+
+    void ReproducirSonidoMovimiento()
+    {
+        if (audioSource == null || sonidoMovimiento == null) return;
+
+        // Solo reproducir si está en el suelo y moviéndose
+        bool seEstáMoviendo = enSuelo && Mathf.Abs(velocidad.x) > velocidadMinimaParaSonido;
+
+        if (seEstáMoviendo)
+        {
+            // Si no está sonando, reproducir en loop
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = sonidoMovimiento;
+                audioSource.loop = true;
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            // Si no se mueve, detener el sonido
+            if (audioSource.isPlaying && audioSource.clip == sonidoMovimiento)
+            {
+                audioSource.Stop();
+            }
+        }
+    }
+
     void TrySetFloat(string name, float value)
     {
         if (animator == null) return;

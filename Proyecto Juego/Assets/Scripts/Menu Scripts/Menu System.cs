@@ -15,7 +15,7 @@ public class MenuSystem : MonoBehaviour
     public void Salir()
     {
         Debug.Log("Saliendo del juego ...");
-        //Application.Quit();
+        Application.Quit();
     }
     public void Reintentar()
     {
